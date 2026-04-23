@@ -47,12 +47,13 @@
 
     /* ─── Reset & Base ──────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; max-width: 100%; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--cream);
       color: var(--text-body);
       overflow-x: hidden;
+      max-width: 100%;
       line-height: 1.7;
     }
     img { display: block; width: 100%; object-fit: cover; }
@@ -1315,12 +1316,9 @@
       .reviews-slider-wrap { gap: 0; }
       .rev-arrow { display: none; }
       .reviews-track-outer {
-        overflow: visible;
-        margin: 0 -20px;
-        padding: 4px 20px 4px;
-      }
-      .reviews-track-outer-clip {
         overflow: hidden;
+        margin: 0;
+        padding: 4px 0;
       }
       .review-card {
         width: 100%;
