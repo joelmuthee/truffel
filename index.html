@@ -1273,10 +1273,19 @@
     .rev-dot.active { background: var(--gold-dark); transform: scale(1.3); }
 
     @media (max-width: 768px) {
-      .nav-logo img, .nav-logo-img { height: 62px !important; }
-      .nav-inner { justify-content: space-between; text-align: left; }
-      .nav-logo { margin-right: auto; }
-      .hamburger { margin-left: auto; }
+      .nav-logo img, .nav-logo-img { height: 54px !important; }
+      .nav-inner { justify-content: space-between !important; text-align: left; align-items: center; }
+      .nav-logo { margin-right: auto; margin-left: 0; flex-shrink: 0; }
+      .hamburger {
+        display: flex !important;
+        margin-left: auto;
+        margin-right: 0;
+        flex-shrink: 0;
+        z-index: 205;
+        padding: 10px;
+      }
+      .hamburger span { background: var(--white) !important; width: 26px; height: 2.5px; }
+      #navbar:not(.scrolled) .hamburger span { box-shadow: 0 0 6px rgba(0,0,0,0.4); }
       .hero-content { text-align: center; margin: 0 auto; }
       .doctor-credentials {
         justify-content: center;
