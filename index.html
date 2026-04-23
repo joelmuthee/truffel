@@ -1273,6 +1273,9 @@
 
     @media (max-width: 768px) {
       .nav-logo img, .nav-logo-img { height: 62px !important; }
+      .nav-inner { justify-content: space-between; text-align: left; }
+      .nav-logo { margin-right: auto; }
+      .hamburger { margin-left: auto; }
       .hero-content { text-align: center; margin: 0 auto; }
       .hero-sub { margin-left: auto; margin-right: auto; }
       .hero-ctas { justify-content: center; }
@@ -2643,7 +2646,7 @@
         requestAnimationFrame(tick);
         counterObserver.unobserve(el);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
     counters.forEach(c => counterObserver.observe(c));
 
     /* ── Reviews Slider ── */
