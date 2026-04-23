@@ -62,7 +62,8 @@
       "mcp__Windows-MCP__Wait",
       "mcp__Windows-MCP__Shortcut",
       "mcp__Windows-MCP__Scroll",
-      "mcp__Windows-MCP__Move"
+      "mcp__Windows-MCP__Move",
+      "PowerShell($files = @\\('index.html','contact.html','appointment.html','cosmetic\\\\bbl.html','cosmetic\\\\breast-augmentation.html','cosmetic\\\\breast-reduction.html','cosmetic\\\\liposuction.html','cosmetic\\\\tummy-tuck.html','cosmetic\\\\lipoabdominoplasty.html','cosmetic\\\\mastopexy.html'\\); foreach \\($f in $files\\) { $c = Get-Content $f -Raw -Encoding UTF8; $c = $c -replace [char]0x2014, '-' -replace [char]0x2013, '-'; Set-Content -Path $f -Value $c -Encoding UTF8 -NoNewline })"
     ]
   }
 }
