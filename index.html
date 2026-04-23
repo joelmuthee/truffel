@@ -1335,8 +1335,16 @@
         max-width: 100%;
         padding: 22px 20px;
         gap: 14px;
+        box-sizing: border-box;
       }
-      .rc-text { font-size: 0.9rem; line-height: 1.65; }
+      .rc-text {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+      }
       .rc-avatar { width: 40px; height: 40px; }
       .rc-name { font-size: 13px; }
       .rc-date { font-size: 11px; }
