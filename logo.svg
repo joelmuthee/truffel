@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" width="260" height="56" role="img" aria-label="Truffel Healthcare Kilimani">
+
+  <!-- Mushroom cap — dome -->
+  <path d="M4,26 Q4,4 26,4 Q48,4 48,26 Q26,34 4,26 Z" fill="#ebd99f"/>
+  <!-- Cap highlight -->
+  <ellipse cx="17" cy="14" rx="6" ry="5" fill="rgba(255,255,255,0.22)"/>
+  <!-- Stem -->
+  <path d="M18,25 Q17,38 22,42 Q27,38 34,25 Q26,30 18,25 Z" fill="#ebd99f"/>
+  <!-- Thin divider -->
+  <line x1="60" y1="5" x2="60" y2="51" stroke="#ebd99f" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- TRUFFEL HEALTHCARE -->
+  <text
+    x="70" y="24"
+    font-family="Playfair Display, Georgia, serif"
+    font-size="15.5"
+    font-weight="700"
+    fill="#ebd99f"
+    letter-spacing="2.2"
+  >TRUFFEL HEALTHCARE</text>
+
+  <!-- KILIMANI -->
+  <text
+    x="71" y="38"
+    font-family="Inter, Arial, sans-serif"
+    font-size="9"
+    font-weight="600"
+    fill="#ebd99f"
+    letter-spacing="6"
+    opacity="0.8"
+  >KILIMANI</text>
+
+  <!-- Tagline -->
+  <text
+    x="70" y="51"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="7.5"
+    font-style="italic"
+    fill="rgba(235,217,159,0.55)"
+    letter-spacing="0.3"
+  >'We Are Reliable In Your Healthcare Journey'</text>
+
+</svg>

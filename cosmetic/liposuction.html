@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liposuction — Truffel Healthcare Kilimani</title>
+  <meta name="description" content="Precision liposuction by Dr. Matwa Christopher at Truffel Healthcare Kilimani. Sculpt and define your silhouette with targeted fat removal. KMPDC Licensed.">
+
+  <!-- Open Graph / WhatsApp / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Precision Liposuction — Truffel Healthcare Kilimani">
+  <meta property="og:description" content="Sculpt and define your silhouette with precision fat removal by Dr. Matwa Christopher, Lead Plastic Surgeon at Truffel Healthcare Kilimani.">
+  <meta property="og:image" content="https://truffelhealthcare.co.ke/images/service-liposuction.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://truffelhealthcare.co.ke/cosmetic/liposuction.html">
+  <meta property="og:site_name" content="Truffel Healthcare Kilimani">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://truffelhealthcare.co.ke/images/service-liposuction.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================== CSS VARIABLES ===================== */
+    :root {
+      --gold: #ebd99f;
+      --gold-dark: #c9a84c;
+      --gold-deeper: #a8852a;
+      --cream: #faf8f0;
+      --cream-2: #f3efe3;
+      --dark: #1c1c1e;
+      --dark-2: #2a2a2c;
+      --dark-3: #3a3a3c;
+      --text-muted: #8a8a8e;
+      --text-body: #4a4a4e;
+      --white: #ffffff;
+      --nav-h: 100px;
+      --section-pad: clamp(80px, 10vw, 140px);
+      --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-body);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+
+    em { font-style: italic; color: var(--gold-dark); }
+
+    /* ===================== SECTION LABEL ===================== */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold-dark);
+    }
+    .section-label.light { color: var(--gold); }
+    .section-label.light::before { background: var(--gold); }
+
+    /* ===================== BUTTONS ===================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.3s var(--transition);
+      border: none;
+    }
+    .btn-gold {
+      background: var(--gold-dark);
+      color: var(--dark);
+    }
+    .btn-gold:hover {
+      background: var(--gold-deeper);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(168, 133, 42, 0.35);
+    }
+    .btn-dark {
+      background: var(--dark);
+      color: var(--gold);
+    }
+    .btn-dark:hover {
+      background: var(--dark-2);
+      transform: translateY(-2px);
+    }
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--dark);
+      border: 1px solid var(--dark);
+    }
+    .btn-outline-dark:hover {
+      background: var(--dark);
+      color: var(--gold);
+    }
+
+    /* ===================== NAV ===================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      padding: 0 clamp(20px, 5vw, 80px);
+      justify-content: space-between;
+      transition: background 0.35s, box-shadow 0.35s;
+    }
+    .navbar.scrolled {
+      background: rgba(28, 28, 30, 0.97);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .nav-logo img { height: 70px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-links > li { position: relative; }
+    .nav-links > li > a {
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      display: block;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links > li > a:hover { color: var(--gold); }
+
+    .nav-book {
+      background: var(--gold-dark);
+      color: var(--dark) !important;
+      padding: 9px 20px !important;
+      border-radius: 2px;
+      font-weight: 600 !important;
+      margin-left: 8px;
+    }
+    .nav-book:hover { background: var(--gold-deeper); color: var(--dark) !important; }
+
+    /* Dropdown */
+    .nav-dropdown { position: relative; }
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 18px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-8px);
+      background: var(--white);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-top: 2px solid var(--gold-dark);
+      border-radius: 4px;
+      min-width: 210px;
+      padding: 6px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s, visibility 0.22s, transform 0.22s var(--transition);
+      z-index: 300;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    .nav-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .dropdown-menu a {
+      color: rgba(28, 28, 30, 0.72) !important;
+      padding: 11px 18px;
+      font-size: 12.5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: color 0.2s, background 0.2s;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+    }
+    .dropdown-menu a:hover {
+      color: var(--gold-deeper) !important;
+      background: rgba(235, 217, 159, 0.15);
+    }
+    .dropdown-menu a.current-page {
+      color: var(--gold-deeper) !important;
+      background: rgba(235, 217, 159, 0.1);
+      font-weight: 600;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      display: block;
+      transition: all 0.3s;
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--dark);
+      z-index: 210;
+      overflow-y: auto;
+      padding: 24px;
+      transform: translateX(100%);
+      transition: transform 0.35s var(--transition);
+    }
+    .nav-mobile.open { transform: translateX(0); }
+    .mobile-link {
+      display: block;
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: color 0.2s;
+    }
+    .mobile-link:hover { color: var(--gold); }
+    .mobile-accordion-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .mobile-accordion-btn .acc-icon {
+      font-size: 18px;
+      color: var(--gold-dark);
+      transition: transform 0.3s;
+    }
+    .mobile-accordion-btn.open .acc-icon { transform: rotate(45deg); }
+    .mobile-accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--transition);
+    }
+    .mobile-accordion-body.open { max-height: 800px; }
+    .mobile-sub-link {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 13.5px;
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.2s;
+    }
+    .mobile-sub-link:hover { color: var(--gold); }
+    .mobile-sub-link.current-page { color: var(--gold-dark); font-weight: 600; }
+    .mobile-book-btn {
+      display: block;
+      text-align: center;
+      background: var(--gold-dark);
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px;
+      border-radius: 2px;
+      margin-top: 24px;
+    }
+
+    /* ===================== HERO ===================== */
+    .proc-hero {
+      position: relative;
+      height: 92vh;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .proc-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('../images/service-liposuction.png');
+      background-size: cover;
+      background-position: center;
+      animation: kenBurns 18s ease-in-out infinite alternate;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1.08) translate(0%, 0%); }
+      50%  { transform: scale(1.12) translate(-1.5%, -1%); }
+      100% { transform: scale(1.08) translate(1.5%, -0.5%); }
+    }
+    .proc-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .proc-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 clamp(20px, 5vw, 80px);
+      max-width: 780px;
+      padding-top: var(--nav-h);
+    }
+    .hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .hero-breadcrumb a {
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .hero-breadcrumb a:hover { color: var(--gold); }
+    .hero-breadcrumb span { color: rgba(255,255,255,0.3); font-size: 12px; }
+    .hero-breadcrumb .current {
+      color: var(--gold-dark);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .proc-hero-content h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .proc-hero-content .hero-lead {
+      font-size: clamp(15px, 2vw, 18px);
+      color: rgba(255,255,255,0.78);
+      font-weight: 300;
+      margin-bottom: 36px;
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(235,217,159,0.3);
+      backdrop-filter: blur(8px);
+      padding: 12px 20px;
+      border-radius: 2px;
+    }
+    .hero-stat .stat-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .hero-stat .stat-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* ===================== OVERVIEW ===================== */
+    .overview-section {
+      background: var(--cream);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(48px, 7vw, 100px);
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .overview-text h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      margin-bottom: 24px;
+    }
+    .overview-text p {
+      color: var(--text-body);
+      margin-bottom: 20px;
+      font-size: 15.5px;
+      line-height: 1.75;
+    }
+    .overview-text p:last-of-type { margin-bottom: 32px; }
+    .overview-img-frame {
+      position: relative;
+    }
+    .overview-img-frame::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      bottom: 14px;
+      left: 14px;
+      border: 2px solid var(--gold-dark);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .overview-img-frame img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    /* ===================== BENEFITS ===================== */
+    .benefits-section {
+      background: var(--cream-2);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+    .benefits-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 56px;
+    }
+    .benefits-header h2 { font-size: clamp(30px, 3.5vw, 44px); }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .benefit-card {
+      background: var(--white);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      padding: 36px 28px;
+      transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition), border-color 0.3s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+      border-color: var(--gold-dark);
+    }
+    .benefit-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .benefit-card h3 {
+      font-size: 18px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    .benefit-card p {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.65;
+    }
+
+    /* ===================== THE PROCEDURE ===================== */
+    .procedure-section {
+      background: var(--dark);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+    .procedure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(48px, 7vw, 100px);
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .procedure-text h2 {
+      font-size: clamp(30px, 3.5vw, 46px);
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .procedure-text .proc-intro {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .procedure-steps { display: flex; flex-direction: column; gap: 28px; }
+    .step-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-number {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--gold-dark);
+    }
+    .step-body h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .step-body p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+    }
+    .procedure-img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: brightness(0.85);
+    }
+
+    /* ===================== BEFORE & AFTER ===================== */
+    .ba-section {
+      background: var(--cream);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+    .ba-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 56px;
+    }
+    .ba-header h2 { font-size: clamp(30px, 3.5vw, 44px); }
+    .ba-disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .ba-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .ba-pair-label {
+      grid-column: 1 / -1;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .ba-item { position: relative; }
+    .ba-item img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+    .ba-label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.65);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 2px;
+    }
+    .ba-label.after { background: rgba(201,168,76,0.85); color: var(--dark); }
+
+    /* ===================== RECOVERY TIMELINE ===================== */
+    .recovery-section {
+      background: var(--cream-2);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+    .recovery-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 64px;
+    }
+    .recovery-header h2 { font-size: clamp(30px, 3.5vw, 44px); }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: var(--gold-dark);
+      z-index: 0;
+    }
+    .timeline-phase {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .phase-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--dark);
+    }
+    .phase-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--gold-deeper);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .phase-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .phase-desc {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* ===================== FAQ ===================== */
+    .faq-section {
+      background: var(--white);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+    .faq-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 56px;
+    }
+    .faq-header h2 { font-size: clamp(30px, 3.5vw, 44px); }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+      text-align: left;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gold-deeper); }
+    .faq-question.active { color: var(--gold-deeper); }
+    .faq-toggle {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--gold-dark);
+      transition: all 0.3s;
+      line-height: 1;
+    }
+    .faq-question.active .faq-toggle {
+      background: var(--gold-dark);
+      color: var(--dark);
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--transition), padding 0.4s;
+    }
+    .faq-answer.open { max-height: 400px; }
+    .faq-answer-inner {
+      padding-bottom: 22px;
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    /* ===================== CTA BAND ===================== */
+    .cta-section {
+      background: var(--gold-dark);
+      padding: clamp(70px, 9vw, 120px) clamp(20px, 5vw, 80px);
+      text-align: center;
+    }
+    .cta-section .section-label { justify-content: center; color: var(--gold-deeper); }
+    .cta-section .section-label::before { background: var(--gold-deeper); }
+    .cta-section h2 {
+      font-size: clamp(30px, 4vw, 50px);
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 16px;
+      color: rgba(28,28,30,0.72);
+      max-width: 540px;
+      margin: 0 auto 40px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--dark-2);
+      padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 80px) 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      max-width: 1280px;
+      margin: 0 auto 60px;
+    }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img { height: 60px; }
+    .footer-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    .footer-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: var(--gold-dark);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.55);
+      font-size: 13.5px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-contact { display: flex; flex-direction: column; gap: 14px; }
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .footer-contact-icon {
+      color: var(--gold-dark);
+      font-size: 14px;
+      margin-top: 2px;
+      min-width: 18px;
+    }
+    .footer-contact-text {
+      color: rgba(255,255,255,0.55);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .footer-contact-text a {
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+    .footer-contact-text a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-copy {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-kmpdc {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    /* ===================== WHATSAPP WIDGET ===================== */
+    .whatsapp-widget {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+    }
+    .wa-btn {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      animation: waPulse 2.5s ease-in-out infinite;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 30px rgba(37,211,102,0.5);
+    }
+    @keyframes waPulse {
+      0%, 100% { box-shadow: 0 6px 20px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.3); }
+      50% { box-shadow: 0 6px 20px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0); }
+    }
+    .wa-btn svg { width: 30px; height: 30px; fill: white; }
+    .wa-bubble {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background: var(--white);
+      border-radius: 12px 12px 0 12px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      width: 220px;
+      font-size: 13px;
+      color: var(--dark);
+      line-height: 1.5;
+      opacity: 0;
+      transform: translateY(8px) scale(0.95);
+      pointer-events: none;
+      transition: all 0.3s var(--transition);
+    }
+    .wa-bubble strong { display: block; margin-bottom: 4px; color: #25D366; }
+    .whatsapp-widget:hover .wa-bubble {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    /* ===================== REVEAL ANIMATIONS ===================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s var(--transition), transform 0.65s var(--transition);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 1024px) {
+      .overview-grid { grid-template-columns: 1fr; }
+      .overview-img-frame { order: -1; }
+      .overview-img-frame img { height: 380px; }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .procedure-grid { grid-template-columns: 1fr; }
+      .procedure-img { height: 380px; order: -1; }
+      .timeline { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .timeline::before { display: none; }
+      .ba-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 80px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-mobile { display: block; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-stats { gap: 10px; }
+      .hero-stat { padding: 10px 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .timeline { grid-template-columns: 1fr; }
+      .ba-pair { grid-template-columns: 1fr; gap: 2px; }
+      .ba-item img { height: 260px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================== NAV ======================== -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../New logo.png" height="90" alt="Truffel Healthcare Kilimani">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+
+      <li class="nav-dropdown">
+        <a href="#">Cosmetic Surgery ▾</a>
+        <div class="dropdown-menu">
+          <a href="breast-augmentation.html">Breast Augmentation</a>
+          <a href="breast-reduction.html">Breast Reduction</a>
+          <a href="mastopexy.html">Mastopexy (Breast Lift)</a>
+          <a href="liposuction.html" class="current-page">Liposuction</a>
+          <a href="lipoabdominoplasty.html">Lipoabdominoplasty</a>
+          <a href="bbl.html">Brazilian Butt Lift</a>
+          <a href="tummy-tuck.html">Tummy Tuck</a>
+        </div>
+      </li>
+
+      <li class="nav-dropdown">
+        <a href="#">Reconstructive ▾</a>
+        <div class="dropdown-menu">
+          <a href="../index.html#services">All Reconstructive Services</a>
+        </div>
+      </li>
+
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../appointment.html" class="nav-book">Book Now</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="../index.html" class="mobile-link">Home</a>
+    <a href="../index.html#about" class="mobile-link">About</a>
+
+    <button class="mobile-accordion-btn" id="cosmeticAccBtn">
+      Cosmetic Surgery <span class="acc-icon">+</span>
+    </button>
+    <div class="mobile-accordion-body" id="cosmeticAccBody">
+      <a href="breast-augmentation.html" class="mobile-sub-link">Breast Augmentation</a>
+      <a href="breast-reduction.html" class="mobile-sub-link">Breast Reduction</a>
+      <a href="mastopexy.html" class="mobile-sub-link">Mastopexy (Breast Lift)</a>
+      <a href="liposuction.html" class="mobile-sub-link current-page">Liposuction</a>
+      <a href="lipoabdominoplasty.html" class="mobile-sub-link">Lipoabdominoplasty</a>
+      <a href="bbl.html" class="mobile-sub-link">Brazilian Butt Lift</a>
+      <a href="tummy-tuck.html" class="mobile-sub-link">Tummy Tuck</a>
+    </div>
+
+    <button class="mobile-accordion-btn" id="reconAccBtn">
+      Reconstructive <span class="acc-icon">+</span>
+    </button>
+    <div class="mobile-accordion-body" id="reconAccBody">
+      <a href="../index.html#services" class="mobile-sub-link">All Reconstructive Services</a>
+    </div>
+
+    <a href="../contact.html" class="mobile-link">Contact</a>
+    <a href="../appointment.html" class="mobile-book-btn">Book Appointment</a>
+  </div>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="proc-hero">
+    <div class="proc-hero-bg"></div>
+    <div class="proc-hero-overlay"></div>
+    <div class="proc-hero-content">
+      <nav class="hero-breadcrumb" aria-label="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="#">Cosmetic Surgery</a>
+        <span>›</span>
+        <span class="current">Liposuction</span>
+      </nav>
+
+      <h1>Precision <em>Liposuction</em></h1>
+      <p class="hero-lead">Sculpt and define your silhouette with precision fat removal by Dr. Matwa Christopher.</p>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-label">Duration</span>
+          <span class="stat-value">1–3 Hours</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Anaesthesia</span>
+          <span class="stat-value">Local / General</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Recovery</span>
+          <span class="stat-value">1–2 Weeks</span>
+        </div>
+      </div>
+
+      <a href="../appointment.html" class="btn btn-gold">Book a Consultation</a>
+    </div>
+  </section>
+
+  <!-- ======================== OVERVIEW ======================== -->
+  <section class="overview-section">
+    <div class="overview-grid">
+      <div class="overview-text reveal">
+        <div class="section-label">Procedure Overview</div>
+        <h2>What is <em>Liposuction?</em></h2>
+        <p>Liposuction is a body contouring procedure designed to remove stubborn fat deposits that are resistant to diet and exercise. It is not a weight-loss solution but rather a precision sculpting tool for patients who are close to their ideal body weight and struggling with localised areas of excess fat.</p>
+        <p>Common treatment areas include the abdomen, flanks (love handles), thighs, inner knees, upper arms, back, and the submental area (chin). Multiple regions can often be addressed in a single session, making liposuction an efficient and comprehensive contouring option.</p>
+        <p>Dr. Matwa Christopher employs the tumescent liposuction technique — a saline solution containing a local anaesthetic and adrenaline is infused into the target tissue before fat removal. This approach significantly reduces bleeding, bruising, and post-operative discomfort, shortening recovery time and improving safety compared to traditional dry liposuction methods.</p>
+        <a href="../appointment.html" class="btn btn-gold" style="margin-top: 8px;">Schedule a Consultation</a>
+      </div>
+
+      <div class="overview-img-frame reveal reveal-delay-2">
+        <img src="../images/service-liposuction.png" alt="Liposuction body contouring at Truffel Healthcare Kilimani">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== BENEFITS ======================== -->
+  <section class="benefits-section">
+    <div class="benefits-header reveal">
+      <div class="section-label" style="justify-content:center;">Why Choose Liposuction</div>
+      <h2>Benefits of <em>Precision Liposuction</em></h2>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <span class="benefit-icon">◎</span>
+        <h3>Targeted Fat Removal</h3>
+        <p>Liposuction addresses specific, localised fat deposits that diet and exercise cannot resolve — delivering precisely the contour improvement you are looking for.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-1">
+        <span class="benefit-icon">◈</span>
+        <h3>Improved Body Contours</h3>
+        <p>By removing excess fat from strategic areas, the procedure reveals the underlying muscular definition and creates a smoother, more sculpted silhouette.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <span class="benefit-icon">✦</span>
+        <h3>Minimal Scarring</h3>
+        <p>Liposuction uses tiny incisions (3–5mm) through which the cannula is inserted. These heal to small, barely visible marks that fade further over time.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-1">
+        <span class="benefit-icon">◉</span>
+        <h3>Long-Lasting Results</h3>
+        <p>Fat cells removed by liposuction do not regenerate. As long as a healthy lifestyle is maintained, results are permanent — making liposuction a durable investment.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <span class="benefit-icon">✧</span>
+        <h3>Multiple Areas in One Session</h3>
+        <p>Several treatment zones — for example, abdomen, flanks, and thighs — can be addressed in a single procedure, reducing total downtime and anaesthesia exposure.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3">
+        <span class="benefit-icon">⊕</span>
+        <h3>Fast Recovery</h3>
+        <p>Tumescent technique means less bleeding and bruising. Most patients return to light daily activities within a week and feel substantially recovered within 2–3 weeks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== THE PROCEDURE ======================== -->
+  <section class="procedure-section">
+    <div class="procedure-grid">
+      <div class="procedure-text reveal">
+        <div class="section-label light">How It Works</div>
+        <h2>The <em>Procedure</em></h2>
+        <p class="proc-intro">Dr. Matwa Christopher follows a systematic, safety-first approach to liposuction — ensuring precise fat removal with optimal aesthetic outcomes and minimal recovery time.</p>
+
+        <div class="procedure-steps">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <h4>Consultation &amp; Area Marking</h4>
+              <p>A detailed pre-operative consultation assesses your target areas, skin quality, and fat distribution. Treatment zones are clearly marked on standing skin to guide precise fat removal and ensure symmetrical results.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <h4>Tumescent Infusion</h4>
+              <p>A tumescent solution — saline combined with a local anaesthetic (lidocaine) and a vasoconstrictive agent (adrenaline) — is infused into the treatment area. This numbs the tissue, constricts blood vessels to minimise blood loss, and causes the fat to swell for easier removal.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <h4>Precision Cannula Fat Removal</h4>
+              <p>Small incisions (3–5mm) are made and a thin hollow tube (cannula) is inserted. The cannula is moved in controlled, fanning motions to dislodge and suction out fat cells. Dr. Matwa works in multiple planes to ensure smooth, even contours without surface irregularities.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-body">
+              <h4>Compression &amp; Recovery</h4>
+              <p>Incisions are closed and a medical-grade compression garment is fitted immediately post-procedure. You receive detailed recovery instructions, medications, and a follow-up schedule before discharge. The garment supports healing and helps the skin conform to its new contour.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="../images/service-liposuction.png" alt="Liposuction procedure at Truffel Healthcare Kilimani" class="procedure-img reveal reveal-delay-2">
+    </div>
+  </section>
+
+  <!-- ======================== BEFORE & AFTER ======================== -->
+  <section class="ba-section">
+    <div class="ba-header reveal">
+      <div class="section-label" style="justify-content:center;">Real Results</div>
+      <h2>Before &amp; <em>After</em></h2>
+      <p class="ba-disclaimer">Individual results may vary. Images shown with patient consent for educational purposes.</p>
+    </div>
+
+    <div class="ba-grid">
+      <div>
+        <div class="ba-pair-label">Lateral View</div>
+        <div class="ba-pair reveal">
+          <div class="ba-item">
+            <img src="../images/ba-lipo-before.png" alt="Before liposuction lateral view">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-item">
+            <img src="../images/ba-lipo-after.png" alt="After liposuction lateral view">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="ba-pair-label">Frontal View</div>
+        <div class="ba-pair reveal reveal-delay-2">
+          <div class="ba-item">
+            <img src="../images/ba-frontallipo-before.png" alt="Before liposuction frontal view">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-item">
+            <img src="../images/ba-frontallipo-after.png" alt="After liposuction frontal view">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== RECOVERY TIMELINE ======================== -->
+  <section class="recovery-section">
+    <div class="recovery-header reveal">
+      <div class="section-label" style="justify-content:center;">What to Expect</div>
+      <h2>Your <em>Recovery</em> Timeline</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-phase reveal">
+        <div class="phase-dot">1</div>
+        <div class="phase-title">Days 1–3</div>
+        <div class="phase-name">Compression &amp; Rest</div>
+        <p class="phase-desc">Wear the compression garment continuously, 24 hours a day. Expect some swelling, bruising, and fluid drainage from small incision sites — this is normal. Rest at home. Pain is well managed with prescribed medications.</p>
+      </div>
+      <div class="timeline-phase reveal reveal-delay-1">
+        <div class="phase-dot">2</div>
+        <div class="phase-title">Weeks 1–2</div>
+        <div class="phase-name">Light Activity</div>
+        <p class="phase-desc">Light walking is encouraged to reduce swelling and promote circulation. Avoid heat exposure (saunas, sun, hot baths), strenuous exercise, and lifting. Most swelling and bruising begins to resolve noticeably by the end of this period.</p>
+      </div>
+      <div class="timeline-phase reveal reveal-delay-2">
+        <div class="phase-dot">3</div>
+        <div class="phase-title">Weeks 2–4</div>
+        <div class="phase-name">Return to Work</div>
+        <p class="phase-desc">Most patients with desk-based or light work return to their professional routine during this phase. Continue wearing the compression garment as directed. Avoid high-intensity exercise for the full 4-week period.</p>
+      </div>
+      <div class="timeline-phase reveal reveal-delay-3">
+        <div class="phase-dot">4</div>
+        <div class="phase-title">Months 2–3</div>
+        <div class="phase-name">Final Results</div>
+        <p class="phase-desc">Residual swelling continues to resolve and the final contouring results become clearly visible. Skin adapts and tightens over the treated areas. Exercise can be resumed fully. Results are now permanent provided weight is maintained.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FAQ ======================== -->
+  <section class="faq-section">
+    <div class="faq-header reveal">
+      <div class="section-label" style="justify-content:center;">Have Questions?</div>
+      <h2>Frequently Asked <em>Questions</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">
+          Is liposuction a weight-loss procedure?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No — liposuction is a body contouring procedure, not a weight-loss treatment. It is designed for patients who are at or near their ideal body weight but have stubborn, localised fat deposits that do not respond to diet or exercise. The amount of fat removed is typically between 1–4 litres, which translates to relatively modest scale weight change. The primary goal is improved shape and proportion, not a reduction in overall body weight.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How many areas can be treated in one session?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Multiple areas can typically be treated in a single session — for example, abdomen, flanks, and thighs together. The number of areas addressed depends on the total volume of fat to be removed, your overall health, and the duration of the procedure. Dr. Matwa will assess this during your consultation and advise on the safest and most effective treatment plan for your specific anatomy and goals.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Will liposuction leave noticeable scars?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Liposuction incisions are very small — typically 3–5mm — and are placed in discreet, natural skin folds wherever possible. These heal into small, flat marks that continue to fade over the following 12–18 months. The majority of patients find the incision marks are barely noticeable once fully healed. Using SPF on the scars and following post-operative care instructions supports the best possible scar outcome.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How long do I need to wear the compression garment?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The compression garment is worn 24 hours a day for the first 2–4 weeks, then transitioned to daytime-only wear for an additional 2–4 weeks, depending on the extent of treatment and your healing progress. The garment plays a critical role in managing swelling, minimising bruising, and helping the skin contract evenly onto your new contour. Following the compression schedule faithfully directly impacts the quality of your final result.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Are liposuction results permanent?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes — the fat cells removed during liposuction are permanently eliminated and do not regenerate. If you maintain a stable weight after the procedure, the sculpted contour is lasting. However, remaining fat cells in the body can still expand with significant weight gain, which may affect the treated area over time. Adopting a healthy diet and consistent exercise routine is the best way to protect and extend your results long-term.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CTA ======================== -->
+  <section class="cta-section">
+    <div class="section-label">Take the Next Step</div>
+    <h2>Ready to Sculpt Your <em>Ideal Silhouette?</em></h2>
+    <p>Book a private consultation with Dr. Matwa Christopher and get a personalised liposuction plan designed around your body, goals, and timeline.</p>
+    <div class="cta-buttons">
+      <a href="../appointment.html" class="btn btn-dark">Book Appointment</a>
+      <a href="tel:+254712419419" class="btn btn-outline-dark">Call +254 712 419419</a>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="../New logo.png" alt="Truffel Healthcare Kilimani">
+        </div>
+        <p class="footer-tagline">Nairobi's specialist cosmetic and reconstructive surgery clinic. KMPDC Licensed. Led by Dr. Matwa Christopher, Founder &amp; Lead Plastic Surgeon.</p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About Dr. Matwa</a>
+          <a href="breast-augmentation.html">Breast Augmentation</a>
+          <a href="mastopexy.html">Mastopexy</a>
+          <a href="liposuction.html">Liposuction</a>
+          <a href="tummy-tuck.html">Tummy Tuck</a>
+          <a href="../appointment.html">Book Appointment</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading">Contact Us</div>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span class="footer-contact-text">Block A1 Saachi Plaza, Arwings Kodhek Road, Kilimani, Nairobi</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span class="footer-contact-text"><a href="tel:+254712419419">+254 712 419419</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉</span>
+            <span class="footer-contact-text"><a href="mailto:info@truffelhealthcare.co.ke">info@truffelhealthcare.co.ke</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Truffel Healthcare Kilimani. All rights reserved.</p>
+      <span class="footer-kmpdc">KMPDC Licensed</span>
+    </div>
+  </footer>
+
+  <!-- ======================== WHATSAPP WIDGET ======================== -->
+  <div class="whatsapp-widget">
+    <div class="wa-bubble">
+      <strong>Chat with us</strong>
+      Book a consultation or ask about liposuction pricing and treatment areas.
+    </div>
+    <a href="https://wa.me/254712419419?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Liposuction%20at%20Truffel%20Healthcare" class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ======================== JS ======================== -->
+  <script>
+    // Nav scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hamburger / mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMobile.classList.toggle('open');
+      document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Mobile accordion
+    function setupMobileAccordion(btnId, bodyId) {
+      const btn = document.getElementById(btnId);
+      const body = document.getElementById(bodyId);
+      if (!btn || !body) return;
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        body.classList.toggle('open');
+      });
+    }
+    setupMobileAccordion('cosmeticAccBtn', 'cosmeticAccBody');
+    setupMobileAccordion('reconAccBtn', 'reconAccBody');
+
+    // Auto-open cosmetic accordion in mobile nav (current page is under it)
+    document.getElementById('cosmeticAccBtn').classList.add('open');
+    document.getElementById('cosmeticAccBody').classList.add('open');
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          answer.classList.add('open');
+          btn.classList.add('active');
+        }
+      });
+    });
+
+    // IntersectionObserver reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Truffel Healthcare Kilimani</title>
+  <meta name="description" content="Get in touch with Truffel Healthcare. Book an appointment, call us, or visit our clinic at Saachi Plaza, Arwings Kodhek Road, Kilimani, Nairobi.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://link.essenceautomations.com">
+  <link rel="dns-prefetch" href="https://link.essenceautomations.com">
+  <link rel="preconnect" href="https://app.essenceautomations.com">
+  <link rel="dns-prefetch" href="https://app.essenceautomations.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #ebd99f;
+      --gold-dark: #c9a84c;
+      --gold-deeper: #a8852a;
+      --cream: #faf8f0;
+      --cream-2: #f3efe3;
+      --dark: #1c1c1e;
+      --dark-2: #2a2a2c;
+      --dark-3: #3a3a3c;
+      --text-muted: #8a8a8e;
+      --text-body: #4a4a4e;
+      --white: #ffffff;
+      --nav-h: 100px;
+      --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-body); overflow-x: hidden; line-height: 1.7; }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+    .serif { font-family: 'Playfair Display', serif; }
+
+    /* ── Nav (same as index) ── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: rgba(28,28,30,0.97); backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(235,217,159,0.15);
+      transition: background 0.4s var(--transition);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+    .nav-logo img { height: 90px; width: auto; display: block; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500; letter-spacing: 0.05em; transition: color 0.3s; position: relative; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s var(--transition); }
+    .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.3s var(--transition); border-radius: 2px; }
+    .btn-gold { background: var(--gold); color: var(--dark); }
+    .btn-gold:hover { background: var(--gold-dark); }
+    .nav-cta { margin-left: 12px; }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: all 0.3s var(--transition); transform-origin: center; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .nav-mobile { position: fixed; inset: 0; background: var(--dark); z-index: 210; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; transform: translateX(100%); transition: transform 0.5s var(--transition); }
+    .nav-mobile.open { transform: translateX(0); }
+    .nav-mobile a { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,6vw,3rem); font-weight: 500; color: var(--white); transition: color 0.3s; }
+    .nav-mobile a:hover { color: var(--gold); }
+    .nav-mobile-close { position: absolute; top: 28px; right: 28px; background: none; border: none; color: var(--white); font-size: 2rem; cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+
+    /* ── Desktop dropdown ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; }
+    .nav-chevron { font-size: 10px; color: var(--gold); transition: transform 0.3s; display: inline-block; line-height: 1; }
+    .nav-dropdown:hover .nav-chevron { transform: rotate(180deg); }
+    .dropdown-menu a::after, .submenu a::after { display: none !important; width: 0 !important; }
+    .dropdown-menu { position: absolute; top: calc(100% + 18px); left: 50%; transform: translateX(-50%) translateY(-8px); background: var(--white); border: 1px solid rgba(201,168,76,0.2); border-top: 2px solid var(--gold-dark); border-radius: 4px; min-width: 210px; padding: 6px 0; opacity: 0; visibility: hidden; transition: opacity 0.22s, visibility 0.22s, transform 0.22s; z-index: 300; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .dropdown-menu li { position: relative; }
+    .dropdown-menu > li + li { border-top: 1px solid rgba(28,28,30,0.06); }
+    .dropdown-menu a { display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; font-size: 12.5px; color: rgba(28,28,30,0.72) !important; white-space: nowrap; transition: color 0.2s, background 0.2s; letter-spacing: 0.04em; }
+    .dropdown-menu a:hover { color: var(--gold-deeper) !important; background: rgba(235,217,159,0.15); }
+    .has-submenu > a .sub-arrow { font-size: 13px; color: var(--gold-dark); transition: transform 0.2s; }
+    .has-submenu:hover > a .sub-arrow { transform: translateX(3px); }
+    .submenu { position: absolute; top: -6px; left: 100%; background: var(--white); border: 1px solid rgba(201,168,76,0.2); border-top: 2px solid var(--gold-dark); border-radius: 4px; min-width: 230px; padding: 6px 0; opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s, transform 0.2s; transform: translateX(-6px); z-index: 301; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .has-submenu:hover .submenu { opacity: 1; visibility: visible; transform: translateX(0); }
+    .submenu a { justify-content: flex-start !important; gap: 10px; padding: 9px 16px !important; }
+    .submenu a::before { content: '–'; font-size: 10px; color: var(--gold-dark); flex-shrink: 0; }
+    .cs-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gold); color: var(--dark); padding: 2px 6px; border-radius: 2px; margin-left: 6px; vertical-align: middle; }
+
+    /* ── Mobile services accordion ── */
+    .mobile-services-toggle { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,6vw,3rem); font-weight: 500; color: var(--white); background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 0; transition: color 0.3s; }
+    .mobile-services-toggle:hover { color: var(--gold); }
+    .mobile-services-toggle .m-chevron { font-size: 1.2rem; color: var(--gold); transition: transform 0.3s; display: inline-block; }
+    .mobile-services-toggle.active .m-chevron { transform: rotate(180deg); }
+    .mobile-services-panel { display: none; flex-direction: column; gap: 0; width: 100%; text-align: center; }
+    .mobile-services-panel.open { display: flex; }
+    .mobile-cat-toggle { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: var(--gold); background: none; border: none; cursor: pointer; padding: 10px 0; letter-spacing: 0.1em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; transition: color 0.3s; }
+    .mobile-cat-toggle .m-chevron { font-size: 0.85rem; transition: transform 0.3s; }
+    .mobile-cat-toggle.active .m-chevron { transform: rotate(180deg); }
+    .mobile-cat-panel { display: none; flex-direction: column; gap: 4px; padding-bottom: 8px; }
+    .mobile-cat-panel.open { display: flex; }
+    .mobile-cat-panel a { font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; color: rgba(255,255,255,0.65) !important; padding: 6px 0; }
+    .mobile-cat-panel a:hover { color: var(--white) !important; }
+
+    /* ── Page hero ── */
+    .page-hero {
+      padding: calc(var(--nav-h) + 64px) 0 64px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(235,217,159,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .page-hero-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .page-hero-label::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 600; color: var(--white); line-height: 1.2;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero p { color: rgba(255,255,255,0.55); max-width: 500px; margin-top: 16px; font-size: 1.05rem; }
+
+    /* ── Contact grid ── */
+    .contact-section { padding: clamp(64px,10vw,120px) 0; background: var(--cream); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: clamp(48px, 8vw, 100px);
+      align-items: start;
+    }
+
+    /* Info column */
+    .contact-info-block { margin-bottom: 40px; }
+    .contact-info-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 600;
+      color: var(--dark); margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--cream-2);
+    }
+    .contact-detail {
+      display: flex; gap: 16px; margin-bottom: 18px;
+      align-items: flex-start;
+    }
+    .contact-detail-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--cream-2); border: 1px solid rgba(201,168,76,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; flex-shrink: 0; color: var(--gold-dark);
+    }
+    .contact-detail-text a {
+      color: var(--text-body);
+      text-decoration: underline;
+      text-decoration-color: rgba(74,74,78,0.2);
+      text-underline-offset: 3px;
+      transition: color 0.25s, text-decoration-color 0.25s;
+      font-size: 14px; line-height: 1.6;
+    }
+    .contact-detail-text a:hover { color: var(--gold-dark); text-decoration-color: var(--gold-dark); }
+    .contact-detail-text span { font-size: 14px; color: var(--text-body); line-height: 1.6; display: block; }
+
+    /* Hours */
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid var(--cream-2); }
+    .hours-table td { padding: 9px 0; font-size: 13.5px; }
+    .hours-table td:first-child { color: var(--text-body); font-weight: 500; }
+    .hours-table td:last-child { text-align: right; color: var(--gold-dark); font-weight: 600; }
+    .hours-table .closed td:last-child { color: var(--text-muted); font-weight: 400; }
+
+    /* Form column */
+    .form-wrap {
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 20px 80px rgba(28,28,30,0.08);
+      overflow: hidden;
+      position: relative;
+    }
+    .form-wrap-header {
+      background: var(--dark); padding: 28px 32px;
+    }
+    .form-wrap-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; color: var(--white); font-weight: 600;
+    }
+    .form-wrap-header p { color: rgba(255,255,255,0.5); font-size: 13.5px; margin-top: 6px; }
+
+    /* ── Iframe loading overlay ── */
+    @keyframes spinRing { to { transform: rotate(360deg); } }
+    @keyframes dotPulse {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40%            { transform: scale(1);   opacity: 1;   }
+    }
+    @keyframes shimmerSweep {
+      0%   { background-position: -400px 0; }
+      100% { background-position:  400px 0; }
+    }
+    .iframe-loader {
+      position: absolute;
+      inset: 0;
+      top: 84px; /* below form header */
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      z-index: 8;
+      transition: opacity 0.55s ease, visibility 0.55s ease;
+      pointer-events: none;
+      min-height: 300px;
+    }
+    .iframe-loader.hidden { opacity: 0; visibility: hidden; }
+    .loader-spinner-wrap { position: relative; width: 60px; height: 60px; }
+    .loader-ring {
+      width: 60px; height: 60px; border-radius: 50%;
+      border: 3px solid rgba(201,168,76,0.2);
+      border-top-color: #c9a84c;
+      animation: spinRing 0.85s linear infinite;
+    }
+    .loader-letter {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: #c9a84c;
+    }
+    .loader-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #8a8a8e;
+    }
+    .loader-dots { display: flex; gap: 7px; }
+    .loader-dots span {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #c9a84c;
+      animation: dotPulse 1.3s ease-in-out infinite;
+    }
+    .loader-dots span:nth-child(2) { animation-delay: 0.15s; }
+    .loader-dots span:nth-child(3) { animation-delay: 0.3s; }
+    .loader-skeleton { width: 80%; max-width: 300px; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .skeleton-row {
+      height: 13px; border-radius: 6px;
+      background: linear-gradient(90deg, rgba(201,168,76,0.08) 25%, rgba(201,168,76,0.18) 50%, rgba(201,168,76,0.08) 75%);
+      background-size: 400px 100%;
+      animation: shimmerSweep 1.6s ease-in-out infinite;
+    }
+    .skeleton-row:nth-child(2) { width: 72%; animation-delay: 0.1s; }
+    .skeleton-row:nth-child(3) { width: 50%; animation-delay: 0.2s; }
+
+    /* Map */
+    .map-section { background: var(--dark); }
+    .map-header { padding: clamp(48px,6vw,80px) 0 28px; }
+    .map-frame { width: 100%; height: 420px; position: relative; }
+    .map-frame iframe { width:100%; height:100%; border:0; display:block; filter: grayscale(20%) contrast(1.05); }
+    .map-frame::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); z-index:1; }
+
+    /* ── Footer (minimal) ── */
+    footer {
+      background: var(--dark); color: rgba(255,255,255,0.4);
+      padding: 24px 0; font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+    /* Reveal */
+    .reveal { opacity:0; transform:translateY(32px); transition: opacity 0.75s var(--transition), transform 0.75s var(--transition); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .page-hero { padding: calc(var(--nav-h) + 32px) 0 40px; }
+      .page-hero h1 { font-size: 2rem; }
+      .map-frame { height: 260px; }
+      .contact-section { padding: 48px 0; }
+      .contact-info-block h3 { font-size: 1.1rem; }
+    }
+
+    /* WhatsApp */
+    .wa-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+    .wa-bubble { background: #1c1c1e; border: 1px solid rgba(235,217,159,0.2); border-radius: 16px 16px 4px 16px; padding: 14px 18px; max-width: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); animation: waPop 0.4s cubic-bezier(0.34,1.56,0.64,1) both; transform-origin: bottom right; position: relative; }
+    .wa-bubble-name { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+    .wa-bubble-text { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.45); cursor: pointer; border: none; transition: transform 0.2s, box-shadow 0.2s; animation: waPulse 2.5s ease-in-out infinite; }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; }
+    .wa-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: rgba(255,255,255,0.4); font-size: 14px; cursor: pointer; line-height: 1; }
+    .wa-close:hover { color: var(--white); }
+    @keyframes waPop { from { opacity:0; transform:scale(0.6); } to { opacity:1; transform:scale(1); } }
+    @keyframes waPulse { 0%,100% { box-shadow:0 4px 20px rgba(37,211,102,0.45); } 50% { box-shadow:0 4px 32px rgba(37,211,102,0.75),0 0 0 8px rgba(37,211,102,0.12); } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="New logo.png" alt="Truffel Healthcare Kilimani" style="height:90px;width:auto;display:block;object-fit:contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#services">Services <span class="nav-chevron">▾</span></a>
+          <ul class="dropdown-menu">
+            <li class="has-submenu">
+              <a href="index.html#services">Cosmetic Surgery <span class="sub-arrow">›</span></a>
+              <ul class="submenu">
+                <li><a href="cosmetic/breast-augmentation.html">Breast Augmentation</a></li>
+                <li><a href="cosmetic/breast-reduction.html">Breast Reduction</a></li>
+                <li><a href="cosmetic/mastopexy.html">Mastopexy (Breast Lift)</a></li>
+                <li><a href="cosmetic/liposuction.html">Liposuction</a></li>
+                <li><a href="cosmetic/lipoabdominoplasty.html">Lipoabdominoplasty</a></li>
+                <li><a href="cosmetic/bbl.html">Brazilian Butt Lift (BBL)</a></li>
+                <li><a href="cosmetic/tummy-tuck.html">Tummy Tuck</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="index.html#services">Reconstructive Surgery <span class="cs-badge">Soon</span> <span class="sub-arrow">›</span></a>
+              <ul class="submenu">
+                <li><a href="index.html#services">Cleft Lip &amp; Palate</a></li>
+                <li><a href="index.html#services">Wound Care &amp; Management</a></li>
+                <li><a href="index.html#services">Burn Reconstruction</a></li>
+                <li><a href="index.html#services">Scar Revision</a></li>
+                <li><a href="index.html#services">Breast Reconstruction</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+      <button onclick="openBookingModal()" class="btn btn-gold nav-cta">Book Appointment</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+    <a href="index.html" onclick="closeMobileNav()">Home</a>
+    <a href="index.html#about" onclick="closeMobileNav()">About Us</a>
+    <button class="mobile-services-toggle" id="mobileServicesToggle">
+      Services <span class="m-chevron">▾</span>
+    </button>
+    <div class="mobile-services-panel" id="mobileServicesPanel">
+      <button class="mobile-cat-toggle" id="mobileCosmeticToggle">
+        Cosmetic Surgery <span class="m-chevron">▾</span>
+      </button>
+      <div class="mobile-cat-panel" id="mobileCosmeticPanel">
+        <a href="cosmetic/breast-augmentation.html" onclick="closeMobileNav()">Breast Augmentation</a>
+        <a href="cosmetic/breast-reduction.html" onclick="closeMobileNav()">Breast Reduction</a>
+        <a href="cosmetic/mastopexy.html" onclick="closeMobileNav()">Mastopexy (Breast Lift)</a>
+        <a href="cosmetic/liposuction.html" onclick="closeMobileNav()">Liposuction</a>
+        <a href="cosmetic/lipoabdominoplasty.html" onclick="closeMobileNav()">Lipoabdominoplasty</a>
+        <a href="cosmetic/bbl.html" onclick="closeMobileNav()">Brazilian Butt Lift (BBL)</a>
+        <a href="cosmetic/tummy-tuck.html" onclick="closeMobileNav()">Tummy Tuck</a>
+      </div>
+      <button class="mobile-cat-toggle" id="mobileReconToggle">
+        Reconstructive Surgery <span class="m-chevron">▾</span>
+      </button>
+      <div class="mobile-cat-panel" id="mobileReconPanel">
+        <a href="index.html#services" onclick="closeMobileNav()">Cleft Lip &amp; Palate</a>
+        <a href="index.html#services" onclick="closeMobileNav()">Wound Care &amp; Management</a>
+        <a href="index.html#services" onclick="closeMobileNav()">Burn Reconstruction</a>
+        <a href="index.html#services" onclick="closeMobileNav()">Scar Revision</a>
+        <a href="index.html#services" onclick="closeMobileNav()">Breast Reconstruction</a>
+      </div>
+    </div>
+    <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+    <a href="#" onclick="closeMobileNav()">FAQ</a>
+    <button onclick="closeMobileNav(); openBookingModal()" class="btn btn-gold" style="margin-top:20px;">Book Appointment</button>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-label reveal">Contact Us</div>
+      <h1 class="serif reveal reveal-delay-1">Get In <em>Touch</em></h1>
+      <p class="reveal reveal-delay-2">We'd love to hear from you. Reach out via phone, email, or visit us at our Kilimani clinic.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div>
+          <div class="contact-info-block reveal">
+            <h3>Reach Us</h3>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">☎</div>
+              <div class="contact-detail-text">
+                <a href="tel:+254712419419">+254 712 419419</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉</div>
+              <div class="contact-detail-text">
+                <a href="mailto:info@truffelhealthcare.co.ke">info@truffelhealthcare.co.ke</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <a href="https://maps.google.com/?q=Truffel+Healthcare+Kilimani+Nairobi" target="_blank" rel="noopener">
+                  Block A1, Saachi Plaza<br>Along Arwings Kodhek Road<br>Kilimani, Nairobi — Kenya
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-block reveal reveal-delay-1">
+            <h3>Opening Hours</h3>
+            <table class="hours-table">
+              <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="form-wrap reveal reveal-delay-1">
+          <div class="form-wrap-header">
+            <h2>Send Us A Message</h2>
+            <p>We'll get back to you within 24 hours.</p>
+          </div>
+          <!-- Loading overlay -->
+          <div class="iframe-loader" id="formLoader">
+            <div class="loader-spinner-wrap">
+              <div class="loader-ring"></div>
+              <div class="loader-letter">T</div>
+            </div>
+            <div class="loader-label">Loading form</div>
+            <div class="loader-dots"><span></span><span></span><span></span></div>
+            <div class="loader-skeleton">
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row"></div>
+            </div>
+          </div>
+
+          <iframe
+            src="https://link.essenceautomations.com/widget/form/FZhG7ela4pSLo13cTlLE"
+            style="width:100%;height:1183px;border:none;"
+            id="inline-FZhG7ela4pSLo13cTlLE"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Contact Us Form"
+            data-height="1183"
+            data-layout-iframe-id="inline-FZhG7ela4pSLo13cTlLE"
+            data-form-id="FZhG7ela4pSLo13cTlLE"
+            title="Contact Us Form"
+            onload="hideLoader('formLoader')">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="map-header container">
+      <div class="page-hero-label reveal" style="color:var(--gold);">Location</div>
+      <h2 class="serif reveal reveal-delay-1" style="font-size:clamp(1.8rem,3vw,2.6rem);color:var(--white);font-weight:600;">Find <em style="font-style:italic;color:var(--gold);">Us</em></h2>
+    </div>
+    <div class="map-frame">
+      <iframe
+        src="https://maps.google.com/maps?q=Truffel+Healthcare+Kilimani+Saachi+Plaza+Nairobi&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Truffel Healthcare Location">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2025 Truffel Healthcare. All rights reserved.</span>
+        <span>Block A1, Saachi Plaza · Kilimani, Nairobi</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-bubble" id="waBubble">
+      <button class="wa-close" id="waClose" aria-label="Close">✕</button>
+      <div class="wa-bubble-name">Truffel Healthcare</div>
+      <div class="wa-bubble-text">Hi there! 👋 How can we help you today? Chat with us on WhatsApp.</div>
+    </div>
+    <a href="https://wa.me/254712419419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" class="wa-btn" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.526 5.842L.057 23.93a.5.5 0 00.611.612l6.198-1.437A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.003-1.373l-.36-.213-3.715.862.882-3.617-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Booking Modal (reused) -->
+  <div id="bookingModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;">
+    <div style="background:var(--white);border-radius:10px;width:min(560px,92vw);max-height:90vh;overflow-y:auto;position:relative;">
+      <button onclick="closeBookingModal()" style="position:absolute;top:12px;right:14px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--dark);z-index:10;">✕</button>
+      <iframe
+        src="https://link.essenceautomations.com/widget/form/FZhG7ela4pSLo13cTlLE"
+        style="width:100%;height:700px;border:none;border-radius:10px;"
+        title="Book Appointment">
+      </iframe>
+    </div>
+  </div>
+
+  <script src="https://link.essenceautomations.com/js/form_embed.js"></script>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    document.getElementById('mobileNavClose').addEventListener('click', closeMobileNav);
+    hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileNav.classList.toggle('open'); document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : ''; });
+    function closeMobileNav() {
+      hamburger.classList.remove('open'); mobileNav.classList.remove('open'); document.body.style.overflow = '';
+      document.getElementById('mobileServicesPanel').classList.remove('open');
+      document.getElementById('mobileServicesToggle').classList.remove('active');
+    }
+
+    document.getElementById('mobileServicesToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('mobileServicesPanel').classList.toggle('open');
+    });
+    document.getElementById('mobileCosmeticToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('mobileCosmeticPanel').classList.toggle('open');
+    });
+    document.getElementById('mobileReconToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('mobileReconPanel').classList.toggle('open');
+    });
+
+    const bookingModal = document.getElementById('bookingModal');
+    function openBookingModal() { bookingModal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeBookingModal() { bookingModal.style.display = 'none'; document.body.style.overflow = ''; }
+    bookingModal.addEventListener('click', e => { if (e.target === bookingModal) closeBookingModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBookingModal(); });
+
+    const waBubble = document.getElementById('waBubble');
+    document.getElementById('waClose').addEventListener('click', () => waBubble.setAttribute('hidden',''));
+    document.querySelector('.wa-btn').addEventListener('mouseenter', () => waBubble.removeAttribute('hidden'));
+    setTimeout(() => waBubble.setAttribute('hidden',''), 8000);
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { e.isIntersecting ? e.target.classList.add('visible') : e.target.classList.remove('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => obs.observe(el));
+
+    /* ── Iframe loader ── */
+    function hideLoader(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.add('hidden');
+    }
+    setTimeout(() => hideLoader('formLoader'), 12000);
+    window.addEventListener('message', function(e) {
+      if (e.data && (e.data.type === 'SET_HEIGHT' || String(e.data).includes('form'))) {
+        hideLoader('formLoader');
+      }
+    });
+  </script>
+
+</body>
+</html>
