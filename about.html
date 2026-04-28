@@ -449,6 +449,43 @@
       line-height: 1.7;
     }
 
+    /* ── REVIEWS ── */
+    #reviews { padding: var(--section-pad) 0; background: var(--cream-2); }
+    .reviews-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 48px; }
+    .reviews-meta { display: flex; align-items: center; gap: 20px; }
+    .google-logo { height: 28px; width: auto; opacity: 0.85; }
+    .reviews-rating-wrap { display: flex; align-items: center; gap: 10px; }
+    .reviews-score { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--dark); }
+    .reviews-stars { color: #fbbc04; font-size: 18px; letter-spacing: 2px; }
+    .reviews-count { font-size: 13px; color: rgba(28,28,30,0.5); }
+    .btn-outline-dark { background: transparent; border: 1px solid rgba(169,132,42,0.4); color: var(--gold-dark); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 11px 22px; border-radius: 2px; cursor: pointer; transition: all 0.3s var(--transition); text-decoration: none; display: inline-flex; align-items: center; }
+    .btn-outline-dark:hover { background: var(--gold-dark); color: var(--white); border-color: var(--gold-dark); }
+    .reviews-slider-wrap { position: relative; display: flex; align-items: center; gap: 16px; }
+    .reviews-track-outer { overflow: hidden; flex: 1; }
+    .reviews-track { display: flex; gap: 24px; transition: transform 0.5s var(--transition); will-change: transform; }
+    .review-card { background: var(--white); border: 1px solid rgba(201,168,76,0.18); border-radius: 8px; padding: 28px 24px; width: calc(50% - 12px); min-width: calc(50% - 12px); max-width: calc(50% - 12px); flex-shrink: 0; display: flex; flex-direction: column; gap: 18px; transition: border-color 0.3s, box-shadow 0.3s; word-wrap: break-word; overflow-wrap: break-word; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .review-card:hover { border-color: var(--gold-dark); box-shadow: 0 6px 28px rgba(201,168,76,0.15); }
+    .rc-stars { color: #fbbc04; font-size: 16px; letter-spacing: 3px; }
+    .rc-text { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-style: italic; color: rgba(28,28,30,0.75); line-height: 1.75; flex: 1; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+    .rc-author { display: flex; align-items: center; gap: 14px; }
+    .rc-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(201,168,76,0.35); }
+    .rc-name { font-size: 14px; font-weight: 600; color: var(--dark); }
+    .rc-date { font-size: 12px; color: rgba(28,28,30,0.45); margin-top: 2px; }
+    .rev-arrow { width: 44px; height: 44px; border-radius: 50%; background: var(--white); border: 1px solid rgba(201,168,76,0.35); color: var(--gold-dark); font-size: 22px; line-height: 1; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s, color 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rev-arrow:hover { background: var(--gold-dark); color: var(--white); border-color: var(--gold-dark); }
+    .rev-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+    .reviews-dots { display: flex; justify-content: center; gap: 8px; margin-top: 28px; }
+    .rev-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(28,28,30,0.15); cursor: pointer; border: none; transition: background 0.3s, transform 0.3s; }
+    .rev-dot.active { background: var(--gold-dark); transform: scale(1.3); }
+    @media (max-width: 768px) {
+      #reviews { padding: 60px 0; }
+      .reviews-header { flex-direction: column; align-items: stretch; gap: 18px; margin-bottom: 28px; }
+      .reviews-meta { justify-content: space-between; gap: 12px; width: 100%; }
+      .google-logo { height: 22px; }
+      .review-card { width: 100%; min-width: 100%; max-width: 100%; }
+      .rev-arrow { display: none; }
+    }
+
     /* ── CTA ── */
     #cta-section {
       padding: var(--section-pad) 0;
@@ -798,6 +835,106 @@
     </div>
   </section>
 
+  <!-- ═══ REVIEWS ═══ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reviews-header reveal">
+        <div class="reviews-meta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-logo">
+          <div class="reviews-rating-wrap">
+            <span class="reviews-score">5.0</span>
+            <div class="reviews-stars">★★★★★</div>
+            <span class="reviews-count">24 reviews</span>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps?cid=4664890710795276738" target="_blank" rel="noopener" class="btn-outline-dark">See All Reviews ↗</a>
+      </div>
+
+      <div class="reviews-slider-wrap reveal reveal-delay-1">
+        <button class="rev-arrow rev-prev" id="revPrev" aria-label="Previous">‹</button>
+        <div class="reviews-track-outer">
+          <div class="reviews-track" id="reviewsTrack">
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"The Best Healthcare walai, the doctor is great and the nurses are all nice and fun - they make you feel at home. I totally recommend Truffel Healthcare."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocKi4t4Z-awMAZbIKsii9jXXck5IFBFNldkYbPqCZJcwOfkG9A=s80-c-rp-mo-br100" alt="Safari Louis" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Safari Louis</div><div class="rc-date">2 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"Got my procedure done and will forever be grateful to the Doc. Very professional and patient - he delivered 💯. The staff are so friendly, kudos to Nurse Lily who took care of me from admission to massages."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocIdk-WSjsSFmlDlVn57st0YcsMm-F1Vk1wSJUsZvHfm8PYAmmlC=s80-c-rp-mo-br100" alt="Sylvia Jardin" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Sylvia Jardin</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"The surgeon and staff are highly skilled, professional and genuinely care about patients' safety and satisfaction. The environment is supportive, organised and patient-centered. Excellent team @Truffel Healthcare."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocLwsK0y-gCEkXwo4EDUA2Up8o8esRKySo0ub0MOra03c0eYmA=s80-c-rp-mo-br100" alt="Faith Njambi" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Faith Njambi</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"I got my procedure done here - best life-changing decision ever! Efficient, well-organised facility. The team made everything seamless. Dr Matwa is incredibly knowledgeable. I am so happy with my results. Highly recommend!"</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocLKbxdigz9LqwjOXqisWIh7g5CvsxZAmSm9PM_6KUkI7q3pdg=s80-c-rp-mo-br100" alt="Joy" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Joy</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"Dr Matwa performed a liposuction and breast reduction on me. The results are amazing. His team of nurses is also amazing - I would recommend him any day for quality service."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocLT83OX30GScPTMKatn71SLFMkJ0AOs10mZPeJugMhFSb_-xOU=s80-c-rp-mo-br100" alt="Lyndsay Nyawira" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Lyndsay Nyawira</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"As a registered nurse who has worked with Dr. Matwa, I've witnessed his professionalism, skill, and genuine care for patients. His surgical outcomes are excellent. I would confidently recommend him to anyone seeking plastic surgery services."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocIqU0NPmH9kuF9Bo92AzTvMpsB4Glzp84mJXLJf_3UlPNLssw=s80-c-rp-mo-br100" alt="Pamela Kawira" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Pamela Kawira</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"With their exceptional care and genuine compassion, I wholeheartedly recommend visiting this clinic for anyone seeking outstanding medical services and support."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a-/ALV-UjW8CSDbZ4nKw1bGeZL5iU0NngFihAtfNTVzC_VvNopYN_FAGCuA=s80-c-rp-mo-br100" alt="Pitah Kamau" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Pitah Kamau</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="rc-stars">★★★★★</div>
+              <p class="rc-text">"Truffel is at a strategic location accessible by private or public means. What made me choose Truffel is how the staff offer quality and timely care. After surgery there is no pain and you get your desired results."</p>
+              <div class="rc-author">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocLduYaJZkvYLMmj7blRyBhau9JLXUMQ0SzLaYk8TWfEKZ2q0MqX=s80-c-rp-mo-br100" alt="Karen Muhia" class="rc-avatar" onerror="this.style.display='none'">
+                <div><div class="rc-name">Karen Muhia</div><div class="rc-date">6 months ago · Google</div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="rev-arrow rev-next" id="revNext" aria-label="Next">›</button>
+      </div>
+      <div class="reviews-dots" id="reviewsDots"></div>
+    </div>
+  </section>
+
   <!-- ═══ CTA ═══ -->
   <section id="cta-section">
     <div class="container">
@@ -892,6 +1029,52 @@
       panel.classList.toggle('open');
       chevron.style.transform = panel.classList.contains('open') ? 'rotate(180deg)' : '';
     });
+
+    // Reviews slider
+    (function() {
+      const track   = document.getElementById('reviewsTrack');
+      const dotsEl  = document.getElementById('reviewsDots');
+      const btnPrev = document.getElementById('revPrev');
+      const btnNext = document.getElementById('revNext');
+      if (!track) return;
+      const cards = track.querySelectorAll('.review-card');
+      const total = cards.length;
+      const perView = () => window.innerWidth < 768 ? 1 : 2;
+      let current = 0, autoTimer;
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('button');
+        d.className = 'rev-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Review ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(d);
+      }
+      function cardWidth() {
+        const pv = perView(), gap = 24, outer = track.parentElement.offsetWidth;
+        return (outer - gap * (pv - 1)) / pv;
+      }
+      function goTo(idx) {
+        const pv = perView(), max = total - pv;
+        current = Math.max(0, Math.min(idx, max));
+        const cw = cardWidth();
+        track.style.transform = `translateX(-${current * (cw + 24)}px)`;
+        dotsEl.querySelectorAll('.rev-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+        btnPrev.disabled = current === 0;
+        btnNext.disabled = current >= max;
+      }
+      btnPrev.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+      btnNext.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+      let touchStartX = 0, touchEndX = 0, touchStartY = 0, touchEndY = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; touchStartY = e.changedTouches[0].screenY; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX; touchEndY = e.changedTouches[0].screenY;
+        const dx = touchEndX - touchStartX, dy = touchEndY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { goTo(dx < 0 ? current + 1 : current - 1); resetAuto(); }
+      }, { passive: true });
+      function resetAuto() { clearInterval(autoTimer); autoTimer = setInterval(() => { const pv = perView(); goTo(current + 1 > total - pv ? 0 : current + 1); }, 5000); }
+      resetAuto();
+      window.addEventListener('resize', () => goTo(current));
+      goTo(0);
+    })();
 
     // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
