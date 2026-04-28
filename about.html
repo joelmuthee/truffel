@@ -47,6 +47,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-body); overflow-x: hidden; line-height: 1.7; }
+    html { overflow-x: hidden; }
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
@@ -183,7 +184,8 @@
     }
     .page-hero-inner {
       position: relative;
-      padding: clamp(60px, 10vw, 120px) 0 clamp(50px, 8vw, 100px);
+      padding-top: clamp(60px, 10vw, 120px);
+      padding-bottom: clamp(50px, 8vw, 100px);
     }
     .page-hero-badge {
       display: inline-block;
@@ -553,9 +555,10 @@
       .story-images { height: 340px; order: -1; }
       .doctor-photo img { height: 420px; }
       .specialties-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .stat-item { border-right: none; border-bottom: 1px solid rgba(235,217,159,0.15); padding: 28px 20px; }
-      .stat-item:last-child { border-bottom: none; }
+      .stats-grid { grid-template-columns: repeat(3, 1fr); }
+      .stat-item { padding: 28px 12px; }
+      .stat-num { font-size: 2rem; white-space: nowrap; }
+      .stat-label { font-size: 10px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
@@ -659,7 +662,7 @@
     <div class="container page-hero-inner">
       <div class="page-hero-badge">Kilimani, Nairobi · Est. 2020</div>
       <h1 class="serif">About <em>Truffel</em><br>Healthcare</h1>
-      <p>A specialized surgical centre built on a simple conviction — that every patient deserves world-class care, delivered with precision, compassion, and integrity.</p>
+      <p>A specialized surgical centre built on a simple conviction: every patient deserves world-class care, delivered with precision, compassion, and integrity.</p>
     </div>
     <div class="page-hero-line"></div>
   </section>
@@ -687,10 +690,10 @@
             Truffel Healthcare was founded with a clear purpose: to make high-quality surgical care accessible to patients in Nairobi and beyond. Located in the heart of Kilimani, we have grown into one of the city's most trusted specialist surgical centres.
           </p>
           <p class="reveal reveal-delay-2">
-            We offer a comprehensive range of surgical services — from plastic and aesthetic procedures to reconstructive and general surgery — all under one roof. Our team brings together specialists across multiple disciplines, working in close collaboration to deliver outcomes that matter.
+            We offer a comprehensive range of surgical services, from plastic and aesthetic procedures to reconstructive and general surgery, all under one roof. Our team brings together specialists across multiple disciplines, working in close collaboration to deliver outcomes that matter.
           </p>
           <p class="reveal reveal-delay-2">
-            Whether you are exploring cosmetic surgery for the first time or require complex reconstructive care, we are committed to being your partner throughout — before, during, and long after your procedure.
+            Whether you are exploring cosmetic surgery for the first time or require complex reconstructive care, we are committed to being your partner throughout: before, during, and long after your procedure.
           </p>
           <div class="story-tags reveal reveal-delay-3">
             <span class="story-tag">Plastic Surgery</span>
@@ -750,7 +753,7 @@
             Holding degrees in physiology, medicine, and plastic surgery, Dr. Matwa is fully licensed by the Kenya Medical Practitioners and Dentists Council (KMPDC). He is a faculty member at Kenya Methodist University and serves as a partner surgeon with Smile Train, performing life-changing cleft lip and palate corrections for children across the region.
           </p>
           <p>
-            His approach combines surgical precision with genuine care — he believes the best outcomes happen when patients are fully informed, respected, and supported at every stage of their journey.
+            His approach combines surgical precision with genuine care. He believes the best outcomes happen when patients are fully informed, respected, and supported at every stage of their journey.
           </p>
 
           <div class="credentials">
@@ -771,7 +774,7 @@
             <div class="credential-item">
               <div class="credential-icon">🏫</div>
               <div class="credential-text">
-                <strong>Faculty — Kenya Methodist University</strong>
+                <strong>Faculty, Kenya Methodist University</strong>
                 Teaching the next generation of surgeons
               </div>
             </div>
@@ -796,7 +799,7 @@
         <div class="section-label reveal">What We Do</div>
         <h2 class="section-heading reveal reveal-delay-1">Our Areas of<br><em>Expertise</em></h2>
         <p class="reveal reveal-delay-2">
-          Our specialist team covers a broad range of surgical disciplines — ensuring that whatever you need, you receive care from someone who has dedicated their career to it.
+          Our specialist team covers a broad range of surgical disciplines, ensuring that whatever you need, you receive care from someone who has dedicated their career to it.
         </p>
       </div>
 
@@ -804,12 +807,12 @@
         <div class="specialty-card reveal">
           <div class="specialty-icon">✦</div>
           <h3>Plastic &amp; Aesthetic Surgery</h3>
-          <p>Breast augmentation, reduction, mastopexy, liposuction, tummy tuck, BBL, and lipoabdominoplasty — procedures designed to enhance form and restore confidence.</p>
+          <p>Breast augmentation, reduction, mastopexy, liposuction, tummy tuck, BBL, and lipoabdominoplasty. Procedures designed to enhance form and restore confidence.</p>
         </div>
         <div class="specialty-card reveal reveal-delay-1">
           <div class="specialty-icon">✦</div>
           <h3>Reconstructive Surgery</h3>
-          <p>Cleft lip and palate repair, burn reconstruction, scar revision, wound care, and breast reconstruction — restoring function and appearance after injury or illness.</p>
+          <p>Cleft lip and palate repair, burn reconstruction, scar revision, wound care, and breast reconstruction. Restoring function and appearance after injury or illness.</p>
         </div>
         <div class="specialty-card reveal reveal-delay-2">
           <div class="specialty-icon">✦</div>
@@ -819,7 +822,7 @@
         <div class="specialty-card reveal reveal-delay-1">
           <div class="specialty-icon">✦</div>
           <h3>Day-Case Surgical Services</h3>
-          <p>Procedures performed and completed within a single day, with full pre-operative preparation and post-operative support — minimal disruption to your life.</p>
+          <p>Procedures performed and completed within a single day, with full pre-operative preparation and post-operative support. Minimal disruption to your life.</p>
         </div>
         <div class="specialty-card reveal reveal-delay-2">
           <div class="specialty-icon">✦</div>
