@@ -46,7 +46,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--cream);
@@ -383,9 +383,12 @@
       font-weight: 600;
       color: var(--gold);
       letter-spacing: 0.08em;
-      white-space: nowrap;
     }
     .hero-stat-chip span { color: rgba(255,255,255,0.65); font-weight: 400; margin-left: 4px; }
+    @media(max-width:600px){
+      .hero-stats { flex-wrap: nowrap; gap: 8px; }
+      .hero-stat-chip { flex: 1; text-align: center; padding: 8px 10px; line-height: 1.3; }
+    }
 
     /* OVERVIEW */
     .overview-section { background: var(--cream); padding: var(--section-pad) 0; }
