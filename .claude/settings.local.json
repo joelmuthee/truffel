@@ -79,7 +79,12 @@
       "Bash(git commit *)",
       "WebFetch(domain:essenceautomations.com)",
       "WebFetch(domain:truffelhealthcare.co.ke)",
-      "WebFetch(domain:joelmuthee.github.io)"
+      "WebFetch(domain:joelmuthee.github.io)",
+      "WebFetch(domain:truffelhealthcare.essenceautomations.com)",
+      "Bash(curl -s \"https://truffelhealthcare.essenceautomations.com/cosmetic/mastopexy.html\")",
+      "Bash(curl -s -I \"https://truffelhealthcare.essenceautomations.com/cosmetic/mastopexy.html\")",
+      "Bash(curl -sL \"https://truffelhealthcare.essenceautomations.com/cosmetic/mastopexy\" -o /tmp/live.html)",
+      "Read(//tmp/**)"
     ]
   }
 }
