@@ -65,7 +65,13 @@
       "mcp__Windows-MCP__Move",
       "PowerShell($files = @\\('index.html','contact.html','appointment.html','cosmetic\\\\bbl.html','cosmetic\\\\breast-augmentation.html','cosmetic\\\\breast-reduction.html','cosmetic\\\\liposuction.html','cosmetic\\\\tummy-tuck.html','cosmetic\\\\lipoabdominoplasty.html','cosmetic\\\\mastopexy.html'\\); foreach \\($f in $files\\) { $c = Get-Content $f -Raw -Encoding UTF8; $c = $c -replace [char]0x2014, '-' -replace [char]0x2013, '-'; Set-Content -Path $f -Value $c -Encoding UTF8 -NoNewline })",
       "WebFetch(domain:www.instagram.com)",
-      "PowerShell($f = 'cosmetic\\\\breast-augmentation.html'; $c = Get-Content $f -Raw -Encoding UTF8; $c = $c -replace 'breast-augmentation-hero\\\\.png', 'Breast%20augmentation.png' -replace 'breast-augmentation-body\\\\.png', 'Breast%20augmentation.png'; Set-Content -Path $f -Value $c -Encoding UTF8 -NoNewline; \\(Select-String -Path $f -Pattern 'Breast%20augmentation'\\).Count)"
+      "PowerShell($f = 'cosmetic\\\\breast-augmentation.html'; $c = Get-Content $f -Raw -Encoding UTF8; $c = $c -replace 'breast-augmentation-hero\\\\.png', 'Breast%20augmentation.png' -replace 'breast-augmentation-body\\\\.png', 'Breast%20augmentation.png'; Set-Content -Path $f -Value $c -Encoding UTF8 -NoNewline; \\(Select-String -Path $f -Pattern 'Breast%20augmentation'\\).Count)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git commit -m 'Add robots.txt allowing facebookexternalhit and social crawlers *)",
+      "mcp__b71c449a-1580-46f4-928d-c18ea7f9c6fb__accounts_list",
+      "Bash(python3 -)"
     ]
   }
 }

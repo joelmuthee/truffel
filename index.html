@@ -1449,6 +1449,9 @@
     }
 
     /* Toast container */
+    @media (max-width: 480px) {
+      .cs-toast { left: 16px !important; right: 16px !important; width: auto !important; top: auto !important; bottom: 16px; }
+    }
     .cs-toast {
       position: fixed;
       top: 120px;
@@ -2008,7 +2011,7 @@
       </div>
 
       <button class="mobile-cat-toggle" id="mobileReconToggle">
-        Reconstructive Surgery <span class="m-chevron">▾</span>
+        Reconstructive Surgery <span style="font-size:9px;background:rgba(201,168,76,0.15);color:var(--gold-dark);padding:2px 7px;border-radius:10px;letter-spacing:0.08em;font-family:Inter,sans-serif;font-weight:600;vertical-align:middle;">Soon</span> <span class="m-chevron">▾</span>
       </button>
       <div class="mobile-cat-panel" id="mobileReconPanel">
         <a href="#" class="recon-link" data-proc="Cleft Lip &amp; Palate" onclick="closeMobileNav()">Cleft Lip &amp; Palate</a>

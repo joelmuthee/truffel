@@ -1582,5 +1582,38 @@
     revealEls.forEach(el => observer.observe(el));
   </script>
 
+  <!-- Coming Soon Toast -->
+  <div id="comingSoonToast" class="cs-toast" role="alert" aria-live="polite">
+    <div class="cs-toast-icon">🔬</div>
+    <div class="cs-toast-body">
+      <div class="cs-toast-label">Coming Soon</div>
+      <div class="cs-toast-title" id="csProcName">Reconstructive Surgery</div>
+      <p class="cs-toast-text">We are bringing world-class reconstructive care to Truffel Healthcare Kilimani. Stay tuned for updates.</p>
+      <a href="../contact.html" class="cs-toast-notify">Get notified &rarr;</a>
+    </div>
+    <button class="cs-toast-close" onclick="hideComingSoon()" aria-label="Dismiss">&#x2715;</button>
+    <div class="cs-toast-progress" id="csProgress"></div>
+  </div>
+  <style>
+    .cs-toast{position:fixed;bottom:24px;right:28px;width:340px;background:var(--white);border-radius:10px;border:1px solid rgba(201,168,76,0.2);border-top:3px solid var(--gold-dark);box-shadow:0 24px 80px rgba(0,0,0,0.16),0 4px 20px rgba(201,168,76,0.12);padding:22px 22px 30px;display:flex;gap:14px;align-items:flex-start;z-index:9999;transform:translateX(calc(100% + 40px));opacity:0;transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94),opacity 0.35s ease;overflow:hidden;pointer-events:none;}
+    .cs-toast.show{transform:translateX(0);opacity:1;pointer-events:all;}
+    .cs-toast-icon{width:42px;height:42px;border-radius:50%;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+    .cs-toast-body{flex:1;min-width:0;}
+    .cs-toast-label{font-size:9.5px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:5px;}
+    .cs-toast-title{font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:6px;}
+    .cs-toast-text{font-size:12.5px;color:var(--text-muted);line-height:1.55;margin-bottom:10px;}
+    .cs-toast-notify{font-size:11.5px;font-weight:600;color:var(--gold-dark);display:inline-flex;align-items:center;gap:4px;}
+    .cs-toast-close{position:absolute;top:14px;right:14px;background:none;border:1px solid rgba(28,28,30,0.1);border-radius:50%;width:26px;height:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--text-muted);}
+    .cs-toast-progress{position:absolute;bottom:0;left:0;height:3px;width:100%;background:var(--gold-dark);transform-origin:left;}
+    .cs-toast.show .cs-toast-progress{animation:csProgress 4.2s linear forwards;}
+    @keyframes csProgress{from{transform:scaleX(1);}to{transform:scaleX(0);}}
+    @media(max-width:480px){.cs-toast{left:16px;right:16px;width:auto;bottom:16px;}}
+  </style>
+  <script>
+    var csTimer=null;
+    function showComingSoon(p){var t=document.getElementById("comingSoonToast"),n=document.getElementById("csProcName"),pr=document.getElementById("csProgress");n.textContent=p;pr.style.animation="none";pr.offsetHeight;pr.style.animation="";t.classList.add("show");clearTimeout(csTimer);csTimer=setTimeout(hideComingSoon,4500);}
+    function hideComingSoon(){document.getElementById("comingSoonToast").classList.remove("show");}
+    document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Reconstructive Surgery");});});
+  </script>
 </body>
 </html>
