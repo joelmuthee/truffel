@@ -71,7 +71,12 @@
       "Bash(git push *)",
       "Bash(git commit -m 'Add robots.txt allowing facebookexternalhit and social crawlers *)",
       "mcp__b71c449a-1580-46f4-928d-c18ea7f9c6fb__accounts_list",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(grep \"\\\\.html$\")",
+      "Bash(sed -n '362,368p' cosmetic/liposuction.html)",
+      "Bash(sed -n '404,410p' cosmetic/mastopexy.html)",
+      "PowerShell($files = @\\('index.html','contact.html','appointment.html','cosmetic\\\\bbl.html','cosmetic\\\\breast-augmentation.html','cosmetic\\\\breast-reduction.html','cosmetic\\\\liposuction.html','cosmetic\\\\lipoabdominoplasty.html','cosmetic\\\\mastopexy.html','cosmetic\\\\tummy-tuck.html'\\); foreach \\($f in $files\\) { $c = Get-Content $f -Raw -Encoding UTF8; $c = $c -replace '\\\\.nav-logo img, \\\\.nav-logo-img \\\\{ height: 54px !important; \\\\}', '.nav-logo img, .nav-logo-img { height: 44px !important; max-height: 44px !important; width: auto !important; max-width: 150px !important; object-fit: contain !important; }'; Set-Content -Path $f -Value $c -Encoding UTF8 -NoNewline; Write-Output \"Updated: $f\" })",
+      "Bash(git commit *)"
     ]
   }
 }
