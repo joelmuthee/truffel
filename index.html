@@ -1909,7 +1909,11 @@
       .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
       .hero-ctas { flex-direction: column; align-items: center; justify-content: center; }
       .hero-ctas .btn { width: 100%; max-width: 280px; text-align: center; justify-content: center; }
-      .about-stats { gap: 24px; }
+      .about-stats { gap: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+      .about-stat-item { padding: 16px 8px; border-right: 1px solid rgba(28,28,30,0.1); }
+      .about-stat-item:last-child { border-right: none; }
+      .about-stat-num { font-size: 1.8rem; white-space: nowrap; }
+      .about-stat-label { font-size: 10px; }
       .services-header { flex-direction: column; align-items: flex-start; gap: 20px; }
     }
 
