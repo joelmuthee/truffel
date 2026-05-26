@@ -127,9 +127,77 @@ FOLDER_MAP = {
     "1l5nv5t46M_4lRcRt-BdmrDD8shyOBXE-": "reduction",
     "1FuVFtdV979Uk7PXcyeo0ICzUN6BJmBkm": "reduction",
     "1DrK1kFQi1kk1yAQ1-5MXs8CNGdarTOA2": "reduction",
+    # Neck Lift
+    "1ISrE2oRuNJ14TyDwxM2V0JdebmV8q7z-": "neck-lift",
+    "12Fixh_jlM4TgaOd73gKQIZzzp4UPv9-u": "neck-lift",
+    "1JkgRtSE7y_sCkR68yj8iF8p0Z0VPyFJw": "neck-lift",
+    "1mSQBUDzs5_cdP2hd2Z6MCvckgwn_5s7R": "neck-lift",
+    "1hYleTJ5meRJKQLtrwrDkPzhhysyx5KCp": "neck-lift",
+    "12O9FOOV6vhms3UiyhMSRoRK8AWhAJYtP": "neck-lift",
+    "1_bvfMXd1i19HIgna4ei4t8uS_myyhZ2V": "neck-lift",
+    "1ndpMx13P3X2aZsrKCn0I6C0t0gzr8nPb": "neck-lift",
+    # Rhinoplasty
+    "1uenJLN-js4KPAjmn2sj0gKs11mcRk0x8": "rhinoplasty",
+    "1DckY5zfx83TARm8QVyTe2-062hxp-GuF": "rhinoplasty",
+    # Dr Matwa Photos
+    "1d-tVHnhxzw4e90HzOF2IvbZ6LRyO_Jx9": "dr-matwa",
+    "1KErM8S3hmiD9OyQ5xHpJFt7ThhsnZlyS": "dr-matwa",
+    # Otoplasty
+    "1RQJcOWEYC_ocQJZYesO2-DcGB0oKjGG-": "otoplasty",
+    "1c8-dOj2VDexvFtr4l7IKWrmV5VOkNU76": "otoplasty",
+    "1YSb9k8uGYv1bj3JAePKZYb26aKraV0Eg": "otoplasty",
+    "1rug5frF4vcHDJcqEYFBQIE0GzH7_bFdc": "otoplasty",
+    "1f0deF8j9jkvmiBCv8v5x7tH15OpnQTM_": "otoplasty",
+    "1nQX4aNIp7NurH3BJvm5W_BW3J9j7AQSI": "otoplasty",
+    "1hXm5ejfvtm7xYR7ZNHtRxpqOx59plTp5": "otoplasty",
+    "12PwIpS85tWCRoSgZQZrHDpjOF7SemzV2": "otoplasty",
+    # Blepharoplasty
+    "11DJIGLRuKlangjRdRShTbX6xHRS-hihQ": "blepharoplasty",
+    "1XX6TmSj8hakRTuVOV3gJOcN1DbBzPSxz": "blepharoplasty",
+    "1seksFUCV8DIT7BgUlr2fFIuP0wL56KHF": "blepharoplasty",
+    "1BOKkplMLiVyQd0HY0uko4LsScz1by-PX": "blepharoplasty",
+    # Facelift
+    "1VOfPTb2EsGk8SxZRfjiDiqKmXpiLH659": "facelift",
+    "1vuU20DIxngHGgv80ZPKocGEPcO0Ox2mn": "facelift",
+    "1fQhe0dsOMxSkVsfcphSrKlN1_jtHXxL7": "facelift",
+    "17n-yvGyIbGB4gEEbEAvtzOk6bq1kYh-v": "facelift",
+    # Regional Liposuction
+    "1_jHjdM3lwUDCjB1Eyrnn-F62G9lmM0z6": "reg-lipo",
+    "13u6jXwyvgbMHAzAalUM-hOUP_q-dBMs3": "reg-lipo",
+    "102tGtnf6mgBFH3STe-GJ_DSYlX_UoKYJ": "reg-lipo",
+    "1Qvt0ue7BOli46ZewGHjLiNv5FzNBnBpQ": "reg-lipo",
+    # Clitoroplasty (FGM)
+    "1hQS4ghuKedgpgMijGQeP6CioglMkCWFk": "clitoroplasty",
+    "18mj-2zaDWenwM-y8HbVy7uFwmNGCHszH": "clitoroplasty",
+    # Mummy Make-over
+    "1bSi410lN5SLk6qxAcCpEKFdbPkSSizLL": "mummy-makeover",
+    "1lcydw92tMySh8d6dLdCea5xNlwJiNsk9": "mummy-makeover",
+    "1YavWdhpRpFsuC0ykHPtvGHTqaFuGPGCR": "mummy-makeover",
+    "1eI0GisWu_7FOSPwhwVTDQytPJUxfQP3Y": "mummy-makeover",
+    # Home Page Running Photos
+    "1Ysy-IQYRb_mzhbOTjAltA067XUb-eQge": "running",
+    "1asV-VOup1paMI1Lort2uT1ogCqtgXXOX": "running",
+    "1ljq78O9ahcXu0n5PM2_CNXZ1nicNxi7E": "running",
+    "1l7CN3TQUw3gYWEuDgS2qrfdFr_NPr3TH": "running",
+    "1z8rVrMLHNyN1PDCorQkoelwsR9pJRu_S": "running",
+    "1SCM4Q-dPAmgUJ8hMMPsDhBMKddeV6iEm": "running",
+    "1lc9Ow0VRv0gQAB-SfaUykBqhp1wpNvY3": "running",
+    "1HnNHwRrUJ3h2_mvdT4S0IIO4SnB5QOJ9": "running",
+    "16GZxeJIi7onkAOk946qo73iVK6Fezi2z": "running",
+    "1uVEdIUeZILubsnz2tx1mFNsjDKyL38-S": "running",
+    "1YEVz6OXgRuX98gcMPZ-hsWuIWSGrvJda": "running",
+    "1W4_F4CG8HET_XQDg8bbzw73mNYkWmt3J": "running",
+    "1Pu1F4Efvjs4CXW9pa2ZPzyMuHYcFBFde": "running",
+    "19jTZQ_5o-bzRt3y5G7U65M48aScGLdG6": "running",
+    "1CG7Y3pJVQUwcsudQ_vlRmAKK5ESqy9BJ": "running",
+    "1CyUXAjzfV0jBce783_XyCwYoSMdCIDha": "running",
+    "1JXwt5Rkkhx-ZXWbXdckGFczwH_tqU-yW": "running",
 }
 
 GALLERY_BASE = Path(r"C:\Users\Joel\Website Designs\truffel-healthcare\images\gallery")
+IMAGES_BASE  = Path(r"C:\Users\Joel\Website Designs\truffel-healthcare\images")
+# Folders that go directly under images/ rather than images/gallery/
+DIRECT_FOLDERS = {"dr-matwa", "running"}
 MAX_W, MAX_H = 900, 1100
 
 def next_seq(folder: Path) -> int:
@@ -166,7 +234,8 @@ def process_txt(txt_path: Path) -> bool:
         print(f"  SKIP {txt_path.name}: no content")
         return False
 
-    folder = GALLERY_BASE / folder_name
+    base = IMAGES_BASE if folder_name in DIRECT_FOLDERS else GALLERY_BASE
+    folder = base / folder_name
     folder.mkdir(parents=True, exist_ok=True)
     seq = next_seq(folder)
     out_path = folder / f"{seq:02d}.jpg"
