@@ -84,7 +84,8 @@
       "Bash(curl -s \"https://truffelhealthcare.essenceautomations.com/cosmetic/mastopexy.html\")",
       "Bash(curl -s -I \"https://truffelhealthcare.essenceautomations.com/cosmetic/mastopexy.html\")",
       "Bash(curl -sL \"https://truffelhealthcare.essenceautomations.com/cosmetic/mastopexy\" -o /tmp/live.html)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(curl -sL \"https://truffelhealthcare.essenceautomations.com/cosmetic/lipoabdominoplasty\" -o /tmp/lipo.html)"
     ]
   }
 }
