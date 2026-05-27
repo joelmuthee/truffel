@@ -2221,9 +2221,138 @@
           </div>
         </a>
 
+        <!-- ── Extra services (hidden until "View More" clicked) ── -->
+        <a href="cosmetic/lipoabdominoplasty.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/mummy-makeover/01.jpg" alt="Lipoabdominoplasty" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Lipoabdominoplasty</h3>
+            <p class="service-desc">Combined liposuction and tummy tuck for a sculpted, post-pregnancy body transformation in a single operation.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/facelift.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/facelift/01.jpg" alt="Facelift" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Facelift</h3>
+            <p class="service-desc">Targeted facial rejuvenation that restores a natural, youthful contour and reduces visible signs of ageing.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/blepharoplasty.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/blepharoplasty/01.jpg" alt="Blepharoplasty" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Blepharoplasty (Eyelid Surgery)</h3>
+            <p class="service-desc">Corrects drooping eyelids and under-eye bags for a brighter, more refreshed and alert appearance.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/clitoroplasty.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/clitoroplasty/01.jpg" alt="Clitoroplasty" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Clitoroplasty</h3>
+            <p class="service-desc">Reconstructive surgery for FGM-affected patients, restoring anatomy, sensation, and overall wellbeing.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/rhinoplasty.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/rhinoplasty/01.jpg" alt="Rhinoplasty" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Rhinoplasty (Nose Reshaping)</h3>
+            <p class="service-desc">Reshapes the nose for improved facial harmony, while respecting your natural features and breathing function.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/regional-liposuction.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/reg-lipo/01.jpg" alt="Regional Liposuction" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Regional Liposuction</h3>
+            <p class="service-desc">Single-area fat removal using VASER technology for precise body contouring with minimal downtime.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/neck-lift.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/neck-lift/01.jpg" alt="Neck Lift" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Neck Lift</h3>
+            <p class="service-desc">Tightens loose neck skin and defines the jawline for a sleeker, more youthful profile.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/otoplasty.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/gallery/otoplasty/01.jpg" alt="Otoplasty" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Otoplasty (Ear Correction)</h3>
+            <p class="service-desc">Reshapes and repositions prominent ears for a balanced, natural appearance and restored confidence.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+      </div><!-- /services-grid -->
+
+      <!-- View More Button -->
+      <div class="services-more-wrap">
+        <button class="btn btn-outline-dark" id="servicesToggleBtn">
+          <span class="services-more-text">View 8 More Services</span>
+          <span class="services-more-icon">↓</span>
+        </button>
       </div>
+
     </div>
   </section>
+  <style>
+    .service-extra { display: none; }
+    .service-extra.sx-visible {
+      display: block;
+      animation: sxFadeUp 0.45s var(--transition) both;
+    }
+    @keyframes sxFadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .services-more-wrap {
+      text-align: center;
+      margin-top: 52px;
+    }
+    .services-more-wrap .btn-outline-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 36px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+    }
+    .services-more-icon {
+      display: inline-block;
+      transition: transform 0.3s var(--transition);
+      font-size: 14px;
+    }
+    .services-more-wrap.expanded .services-more-icon {
+      transform: rotate(180deg);
+    }
+  </style>
 
   <!-- ═══════════════════════════════════════════════════════════
        CLINIC GALLERY
@@ -2906,6 +3035,39 @@
         showComingSoon(proc);
       });
     });
+
+    /* ── Services "View More" toggle ── */
+    (function() {
+      const btn    = document.getElementById('servicesToggleBtn');
+      if (!btn) return;
+      const extras  = document.querySelectorAll('.service-extra');
+      const wrap    = btn.closest('.services-more-wrap');
+      const textEl  = btn.querySelector('.services-more-text');
+      let expanded  = false;
+
+      btn.addEventListener('click', function() {
+        expanded = !expanded;
+        if (expanded) {
+          extras.forEach(function(el, i) {
+            el.style.animationDelay = (i * 0.07) + 's';
+            el.classList.add('sx-visible');
+          });
+          textEl.textContent = 'View Less';
+          wrap.classList.add('expanded');
+          setTimeout(function() {
+            extras[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 80);
+        } else {
+          extras.forEach(function(el) {
+            el.classList.remove('sx-visible');
+            el.style.animationDelay = '';
+          });
+          textEl.textContent = 'View 8 More Services';
+          wrap.classList.remove('expanded');
+          document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    })();
   </script>
 
 </body>
