@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1956,6 +1956,8 @@
                 <li><a href="cosmetic/lipoabdominoplasty.html">Lipoabdominoplasty</a></li>
                 <li><a href="cosmetic/bbl.html">Brazilian Butt Lift (BBL)</a></li>
                 <li><a href="cosmetic/tummy-tuck.html">Tummy Tuck</a></li>
+                <li><a href="cosmetic/mommy-makeover.html">Mommy Makeover</a></li>
+                <li><a href="cosmetic/brachioplasty.html">Brachioplasty (Arm Lift)</a></li>
                 <li><a href="cosmetic/neck-lift.html">Neck Lift</a></li>
                 <li><a href="cosmetic/rhinoplasty.html">Rhinoplasty</a></li>
                 <li><a href="cosmetic/otoplasty.html">Otoplasty</a></li>
@@ -2015,6 +2017,8 @@
         <a href="cosmetic/lipoabdominoplasty.html" onclick="closeMobileNav()">Lipoabdominoplasty</a>
         <a href="cosmetic/bbl.html" onclick="closeMobileNav()">Brazilian Butt Lift (BBL)</a>
         <a href="cosmetic/tummy-tuck.html" onclick="closeMobileNav()">Tummy Tuck</a>
+        <a href="cosmetic/mommy-makeover.html" onclick="closeMobileNav()">Mommy Makeover</a>
+        <a href="cosmetic/brachioplasty.html" onclick="closeMobileNav()">Brachioplasty (Arm Lift)</a>
         <a href="cosmetic/neck-lift.html" onclick="closeMobileNav()">Neck Lift</a>
         <a href="cosmetic/rhinoplasty.html" onclick="closeMobileNav()">Rhinoplasty</a>
         <a href="cosmetic/otoplasty.html" onclick="closeMobileNav()">Otoplasty</a>
@@ -2310,12 +2314,34 @@
           </div>
         </a>
 
+        <a href="cosmetic/mommy-makeover.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/running/04.jpg" alt="Mommy Makeover at Truffel Healthcare" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Mommy Makeover</h3>
+            <p class="service-desc">Customised procedure combinations that restore your body to its pre-pregnancy state.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="cosmetic/brachioplasty.html" class="service-card service-extra">
+          <div class="service-img">
+            <img src="images/running/12.jpg" alt="Brachioplasty arm lift at Truffel Healthcare" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3 class="service-name">Brachioplasty (Arm Lift)</h3>
+            <p class="service-desc">Reduce and tone the upper arms through targeted liposuction or a full arm lift.</p>
+            <span class="service-link">Learn More</span>
+          </div>
+        </a>
+
       </div><!-- /services-grid -->
 
       <!-- View More Button -->
       <div class="services-more-wrap">
         <button class="btn btn-outline-dark" id="servicesToggleBtn">
-          <span class="services-more-text">View 8 More Services</span>
+          <span class="services-more-text">View 10 More Services</span>
           <span class="services-more-icon">↓</span>
         </button>
       </div>
@@ -3062,7 +3088,7 @@
             el.classList.remove('sx-visible');
             el.style.animationDelay = '';
           });
-          textEl.textContent = 'View 8 More Services';
+          textEl.textContent = 'View 10 More Services';
           wrap.classList.remove('expanded');
           document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
