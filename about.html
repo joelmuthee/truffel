@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -601,13 +601,15 @@
               </ul>
             </li>
             <li class="has-submenu">
-              <a href="index.html#services">Reconstructive Surgery <span class="cs-badge" style="font-size:9px;background:rgba(201,168,76,0.15);color:var(--gold-dark);padding:2px 7px;border-radius:10px;letter-spacing:0.1em;">Coming Soon</span> <span class="sub-arrow">›</span></a>
+              <a href="index.html#services">Other Surgeries <span class="cs-badge" style="font-size:9px;background:rgba(201,168,76,0.15);color:var(--gold-dark);padding:2px 7px;border-radius:10px;letter-spacing:0.1em;">Coming Soon</span> <span class="sub-arrow">›</span></a>
               <ul class="submenu">
-                <li><a href="#">Cleft Lip &amp; Palate</a></li>
-                <li><a href="#">Wound Care &amp; Management</a></li>
-                <li><a href="#">Burn Reconstruction</a></li>
-                <li><a href="#">Scar Revision</a></li>
-                <li><a href="#">Breast Reconstruction</a></li>
+                <li><a href="#">ENT (Otolaryngology)</a></li>
+                <li><a href="#">Orthopedic</a></li>
+                <li><a href="#">Urology</a></li>
+                <li><a href="#">Pediatric Surgery</a></li>
+                <li><a href="#">Neurosurgery</a></li>
+                <li><a href="#">Cardiothoracic</a></li>
+                <li><a href="#">General Surgery</a></li>
               </ul>
             </li>
           </ul>
@@ -642,13 +644,15 @@
         <a href="cosmetic/bbl.html" onclick="closeMobileNav()">Brazilian Butt Lift (BBL)</a>
         <a href="cosmetic/tummy-tuck.html" onclick="closeMobileNav()">Tummy Tuck</a>
       </div>
-      <button class="mobile-cat-toggle" id="mobileReconToggle">Reconstructive Surgery <span style="font-size:9px;background:rgba(201,168,76,0.15);color:var(--gold-dark);padding:2px 7px;border-radius:10px;letter-spacing:0.08em;font-family:Inter,sans-serif;font-weight:600;vertical-align:middle;">Coming Soon</span> <span class="m-chevron">▾</span></button>
+      <button class="mobile-cat-toggle" id="mobileReconToggle">Other Surgeries <span style="font-size:9px;background:rgba(201,168,76,0.15);color:var(--gold-dark);padding:2px 7px;border-radius:10px;letter-spacing:0.08em;font-family:Inter,sans-serif;font-weight:600;vertical-align:middle;">Coming Soon</span> <span class="m-chevron">▾</span></button>
       <div class="mobile-cat-panel" id="mobileReconPanel">
-        <a href="#">Cleft Lip &amp; Palate</a>
-        <a href="#">Wound Care &amp; Management</a>
-        <a href="#">Burn Reconstruction</a>
-        <a href="#">Scar Revision</a>
-        <a href="#">Breast Reconstruction</a>
+        <a href="#">ENT (Otolaryngology)</a>
+        <a href="#">Orthopedic</a>
+        <a href="#">Urology</a>
+        <a href="#">Pediatric Surgery</a>
+        <a href="#">Neurosurgery</a>
+        <a href="#">Cardiothoracic</a>
+        <a href="#">General Surgery</a>
       </div>
     </div>
     <a href="contact.html" onclick="closeMobileNav()">Contact</a>
@@ -1116,8 +1120,8 @@
     <div class="cs-toast-icon">🔬</div>
     <div class="cs-toast-body">
       <div class="cs-toast-label">Coming Soon</div>
-      <div class="cs-toast-title" id="csProcName">Reconstructive Surgery</div>
-      <p class="cs-toast-text">We are bringing world-class reconstructive care to Truffel Healthcare Kilimani. Stay tuned for updates.</p>
+      <div class="cs-toast-title" id="csProcName">Other Surgeries</div>
+      <p class="cs-toast-text">We are expanding into more surgical specialties at Truffel Healthcare Kilimani. Stay tuned for updates.</p>
       <a href="contact.html" class="cs-toast-notify">Get notified &rarr;</a>
     </div>
     <button class="cs-toast-close" onclick="hideComingSoon()" aria-label="Dismiss">&#x2715;</button>
@@ -1142,7 +1146,7 @@
     var csTimer=null;
     function showComingSoon(p){var t=document.getElementById("comingSoonToast"),n=document.getElementById("csProcName"),pr=document.getElementById("csProgress");n.textContent=p;pr.style.animation="none";pr.offsetHeight;pr.style.animation="";t.classList.add("show");clearTimeout(csTimer);csTimer=setTimeout(hideComingSoon,4500);}
     function hideComingSoon(){document.getElementById("comingSoonToast").classList.remove("show");}
-    document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Reconstructive Surgery");});});
+    document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Other Surgeries");});});
   </script>
 </body>
 </html>

@@ -1156,9 +1156,9 @@
       </li>
 
       <li class="nav-dropdown">
-        <a href="#">Reconstructive ▾</a>
+        <a href="#">Other Surgeries ▾</a>
         <div class="dropdown-menu">
-          <a href="../index.html#services">All Reconstructive Services</a>
+          <a href="../index.html#services">All Other Surgeries</a>
         </div>
       </li>
 
@@ -1201,10 +1201,10 @@
     </div>
 
     <button class="mobile-accordion-btn" id="reconAccBtn">
-      Reconstructive <span class="acc-icon">+</span>
+      Other Surgeries <span class="acc-icon">+</span>
     </button>
     <div class="mobile-accordion-body" id="reconAccBody">
-      <a href="../index.html#services" class="mobile-sub-link">All Reconstructive Services</a>
+      <a href="../index.html#services" class="mobile-sub-link">All Other Surgeries</a>
     </div>
 
     <a href="../contact.html" class="mobile-link">Contact</a>
@@ -1743,8 +1743,8 @@
     <div class="cs-toast-icon">🔬</div>
     <div class="cs-toast-body">
       <div class="cs-toast-label">Coming Soon</div>
-      <div class="cs-toast-title" id="csProcName">Reconstructive Surgery</div>
-      <p class="cs-toast-text">We are bringing world-class reconstructive care to Truffel Healthcare Kilimani. Stay tuned for updates.</p>
+      <div class="cs-toast-title" id="csProcName">Other Surgeries</div>
+      <p class="cs-toast-text">We are expanding into more surgical specialties at Truffel Healthcare Kilimani. Stay tuned for updates.</p>
       <a href="../contact.html" class="cs-toast-notify">Get notified &rarr;</a>
     </div>
     <button class="cs-toast-close" onclick="hideComingSoon()" aria-label="Dismiss">&#x2715;</button>
@@ -1769,7 +1769,7 @@
     var csTimer=null;
     function showComingSoon(p){var t=document.getElementById("comingSoonToast"),n=document.getElementById("csProcName"),pr=document.getElementById("csProgress");n.textContent=p;pr.style.animation="none";pr.offsetHeight;pr.style.animation="";t.classList.add("show");clearTimeout(csTimer);csTimer=setTimeout(hideComingSoon,4500);}
     function hideComingSoon(){document.getElementById("comingSoonToast").classList.remove("show");}
-    document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Reconstructive Surgery");});});
+    document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Other Surgeries");});});
   </script>
 
 <script>
