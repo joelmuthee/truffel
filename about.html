@@ -608,6 +608,17 @@
                 <li><a href="cosmetic/lipoabdominoplasty.html">Lipoabdominoplasty (Tummy Tuck + Lipo)</a></li>
                 <li><a href="cosmetic/bbl.html">Brazilian Butt Lift (BBL)</a></li>
                 <li><a href="cosmetic/tummy-tuck.html">Tummy Tuck</a></li>
+                <li><a href="cosmetic/mommy-makeover.html">Mommy Makeover</a></li>
+                <li><a href="cosmetic/brachioplasty.html">Brachioplasty (Arm Lift)</a></li>
+                <li><a href="cosmetic/gynecomastia.html">Male Breast Reduction</a></li>
+                <li><a href="cosmetic/o-shot.html">O-Shot (Intimate Wellness)</a></li>
+                <li><a href="cosmetic/neck-lift.html">Neck Lift</a></li>
+                <li><a href="cosmetic/rhinoplasty.html">Rhinoplasty (Nose Reshaping)</a></li>
+                <li><a href="cosmetic/otoplasty.html">Otoplasty (Ear Reshaping)</a></li>
+                <li><a href="cosmetic/blepharoplasty.html">Blepharoplasty (Eyelid Lift)</a></li>
+                <li><a href="cosmetic/facelift.html">Facelift</a></li>
+                <li><a href="cosmetic/clitoroplasty.html">Clitoroplasty (FGM)</a></li>
+                <li><a href="cosmetic/regional-liposuction.html">Regional Liposuction (Targeted Fat Removal)</a></li>
               </ul>
             </li>
             <li class="has-submenu">
@@ -654,6 +665,17 @@
         <a href="cosmetic/lipoabdominoplasty.html" onclick="closeMobileNav()">Lipoabdominoplasty (Tummy Tuck + Lipo)</a>
         <a href="cosmetic/bbl.html" onclick="closeMobileNav()">Brazilian Butt Lift (BBL)</a>
         <a href="cosmetic/tummy-tuck.html" onclick="closeMobileNav()">Tummy Tuck</a>
+        <a href="cosmetic/mommy-makeover.html" onclick="closeMobileNav()">Mommy Makeover</a>
+        <a href="cosmetic/brachioplasty.html" onclick="closeMobileNav()">Brachioplasty (Arm Lift)</a>
+        <a href="cosmetic/gynecomastia.html" onclick="closeMobileNav()">Male Breast Reduction</a>
+        <a href="cosmetic/o-shot.html" onclick="closeMobileNav()">O-Shot (Intimate Wellness)</a>
+        <a href="cosmetic/neck-lift.html" onclick="closeMobileNav()">Neck Lift</a>
+        <a href="cosmetic/rhinoplasty.html" onclick="closeMobileNav()">Rhinoplasty (Nose Reshaping)</a>
+        <a href="cosmetic/otoplasty.html" onclick="closeMobileNav()">Otoplasty (Ear Reshaping)</a>
+        <a href="cosmetic/blepharoplasty.html" onclick="closeMobileNav()">Blepharoplasty (Eyelid Lift)</a>
+        <a href="cosmetic/facelift.html" onclick="closeMobileNav()">Facelift</a>
+        <a href="cosmetic/clitoroplasty.html" onclick="closeMobileNav()">Clitoroplasty (FGM)</a>
+        <a href="cosmetic/regional-liposuction.html" onclick="closeMobileNav()">Regional Liposuction (Targeted Fat Removal)</a>
       </div>
       <button class="mobile-cat-toggle" id="mobileReconToggle">Other Surgeries <span style="font-size:9px;background:rgba(201,168,76,0.15);color:var(--gold-dark);padding:2px 7px;border-radius:10px;letter-spacing:0.08em;font-family:Inter,sans-serif;font-weight:600;vertical-align:middle;">Coming Soon</span> <span class="m-chevron">▾</span></button>
       <div class="mobile-cat-panel" id="mobileReconPanel">
@@ -1160,6 +1182,46 @@
     function showComingSoon(p){var t=document.getElementById("comingSoonToast"),n=document.getElementById("csProcName"),pr=document.getElementById("csProgress");n.textContent=p;pr.style.animation="none";pr.offsetHeight;pr.style.animation="";t.classList.add("show");clearTimeout(csTimer);csTimer=setTimeout(hideComingSoon,4500);}
     function hideComingSoon(){document.getElementById("comingSoonToast").classList.remove("show");}
     document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Other Surgeries");});});
+  </script>
+
+  <!-- ── WhatsApp Chat Widget ────────────────────────────── -->
+  <style>
+    .wa-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+    .wa-bubble { background: #1c1c1e; border: 1px solid rgba(235,217,159,0.2); border-radius: 16px 16px 4px 16px; padding: 14px 18px; max-width: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); animation: waPop 0.4s cubic-bezier(0.34,1.56,0.64,1) both; transform-origin: bottom right; }
+    .wa-bubble-name { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+    .wa-bubble-text { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.45); cursor: pointer; border: none; transition: transform 0.2s, box-shadow 0.2s; animation: waPulse 2.5s ease-in-out infinite; }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; }
+    .wa-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: rgba(255,255,255,0.4); font-size: 14px; cursor: pointer; line-height: 1; }
+    .wa-close:hover { color: #fff; }
+    @keyframes waPop { from { opacity:0; transform:scale(0.6); } to { opacity:1; transform:scale(1); } }
+    @keyframes waPulse { 0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); } 50% { box-shadow: 0 4px 32px rgba(37,211,102,0.75), 0 0 0 8px rgba(37,211,102,0.12); } }
+    .wa-bubble[hidden] { display: none; }
+  </style>
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-bubble" id="waBubble" style="position:relative;">
+      <button class="wa-close" id="waClose" aria-label="Close">✕</button>
+      <div class="wa-bubble-name">Truffel Healthcare</div>
+      <div class="wa-bubble-text">Hi there! 👋 How can we help you today? Chat with us on WhatsApp.</div>
+    </div>
+    <a href="https://wa.me/254712419419?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" class="wa-btn" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.526 5.842L.057 23.93a.5.5 0 00.611.612l6.198-1.437A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.003-1.373l-.36-.213-3.715.862.882-3.617-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+      </svg>
+    </a>
+  </div>
+  <script>
+    (function(){
+      var waBubble = document.getElementById('waBubble');
+      var waClose  = document.getElementById('waClose');
+      if(!waBubble) return;
+      setTimeout(function(){ waBubble.setAttribute('hidden',''); }, 8000);
+      waClose.addEventListener('click', function(){ waBubble.setAttribute('hidden',''); });
+      var btn = document.querySelector('.wa-btn');
+      if(btn) btn.addEventListener('mouseenter', function(){ waBubble.removeAttribute('hidden'); });
+    })();
   </script>
 </body>
 </html>
