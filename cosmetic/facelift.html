@@ -70,6 +70,8 @@
     .nav-mobile-close{position:absolute;top:28px;right:28px;background:none;border:none;color:var(--white);font-size:2rem;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
     .nav-mobile-cta{margin-top:8px;}
     .nav-dropdown{position:relative;}
+    /* invisible bridge so the dropdown does not vanish across the gap */
+    .nav-dropdown::after{content:"";position:absolute;top:100%;left:0;right:0;height:22px;}
     .nav-dropdown>a{display:flex;align-items:center;gap:5px;}
     .nav-chevron{font-size:10px;color:var(--gold);transition:transform 0.3s var(--transition);display:inline-block;}
     .nav-dropdown:hover .nav-chevron{transform:rotate(180deg);}

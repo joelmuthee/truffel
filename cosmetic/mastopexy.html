@@ -204,6 +204,8 @@
 
     /* Dropdown */
     .nav-dropdown { position: relative; }
+    /* invisible bridge so the dropdown does not vanish across the gap */
+    .nav-dropdown::after{content:"";position:absolute;top:100%;left:0;right:0;height:22px;}
     .dropdown-menu {
       position: absolute;
       top: calc(100% + 18px);

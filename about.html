@@ -153,6 +153,8 @@
     .mobile-services-panel > a:hover, .mobile-cat-panel > a:hover { color:var(--gold); }
 
     .nav-dropdown { position: relative; }
+    /* invisible bridge so the dropdown does not vanish across the gap */
+    .nav-dropdown::after{content:"";position:absolute;top:100%;left:0;right:0;height:22px;}
     .nav-dropdown > a { display: flex; align-items: center; gap: 5px; }
     .nav-chevron { font-size: 10px; color: var(--gold); transition: transform 0.3s; display: inline-block; line-height: 1; }
     .nav-dropdown:hover .nav-chevron { transform: rotate(180deg); }

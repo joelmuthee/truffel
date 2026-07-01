@@ -264,6 +264,8 @@
       transition: opacity 0.25s var(--transition), transform 0.25s var(--transition), visibility 0.25s;
       transform: translateX(-50%) translateY(8px);
     }
+    /* invisible bridge so the dropdown does not vanish across the gap */
+    .dropdown-menu::before{content:"";position:absolute;top:-18px;left:0;right:0;height:18px;}
     .nav-links > li:hover .dropdown-menu {
       opacity: 1;
       visibility: visible;
