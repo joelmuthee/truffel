@@ -24,11 +24,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Preconnect to GHL servers so calendar loads faster -->
-  <link rel="preconnect" href="https://link.essenceautomations.com">
-  <link rel="dns-prefetch" href="https://link.essenceautomations.com">
-  <link rel="preconnect" href="https://app.essenceautomations.com">
-  <link rel="dns-prefetch" href="https://app.essenceautomations.com">
+  <!-- Preconnect to the booking app so the calendar loads faster -->
+  <link rel="preconnect" href="https://truffel-booking.essenceautomations.com">
+  <link rel="dns-prefetch" href="https://truffel-booking.essenceautomations.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -713,7 +711,7 @@
           </div>
 
           <iframe
-            src="https://link.essenceautomations.com/widget/booking/hyN3UsjEF3mJWdVYdCJL"
+            src="https://truffel-booking.essenceautomations.com/?embed=1"
             id="msgsndr-calendar"
             scrolling="no"
             title="Book an Appointment - Truffel Healthcare"
@@ -826,7 +824,18 @@
     </a>
   </div>
 
-  <script src="https://link.essenceautomations.com/js/embed.js" type="text/javascript"></script>
+  <script>
+    // The booking app posts its height as the patient moves through the flow, so the
+    // iframe grows instead of clipping (it has scrolling="no").
+    window.addEventListener('message', function (e) {
+      if (e.origin !== 'https://truffel-booking.essenceautomations.com') return;
+      var d = e.data;
+      if (!d || d.truffelBooking !== 'height') return;
+      var h = Math.max(520, Math.min(3000, Number(d.height) || 0));
+      var f = document.getElementById('msgsndr-calendar');
+      if (f) f.style.height = h + 'px';
+    });
+  </script>
 
   <script>
     const hamburger = document.getElementById('hamburger');
