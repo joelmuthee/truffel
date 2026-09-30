@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book an Appointment - Truffel Healthcare Kilimani</title>
-  <meta name="description" content="Schedule your appointment with Dr. Matwa Christopher at Truffel Healthcare, Kilimani Nairobi. Monday-Saturday, 9AM-5PM.">
+  <meta name="description" content="Schedule your appointment with Dr. Matwa Christopher at Truffel Healthcare, Kilimani Nairobi. Monday-Friday 9AM-5PM, Saturday 9AM-1PM.">
 
   <!-- Open Graph / WhatsApp / Social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Book an Appointment - Truffel Healthcare Kilimani">
-  <meta property="og:description" content="Schedule your appointment with Dr. Matwa Christopher at Truffel Healthcare, Kilimani Nairobi. Monday-Saturday, 9AM-5PM.">
+  <meta property="og:description" content="Schedule your appointment with Dr. Matwa Christopher at Truffel Healthcare, Kilimani Nairobi. Monday-Friday 9AM-5PM, Saturday 9AM-1PM.">
   <meta property="og:image" content="https://truffelhealthcare.essenceautomations.com/images/hero-bg.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -745,7 +745,7 @@
               <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">9AM - 5PM</span></div>
               <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">9AM - 5PM</span></div>
               <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">9AM - 5PM</span></div>
-              <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9AM - 5PM</span></div>
+              <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9AM - 1PM</span></div>
               <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-closed">Closed</span></div>
             </div>
           </div>
@@ -781,7 +781,7 @@
           <div class="info-card-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></div>
           <div>
             <div class="info-card-label">Availability</div>
-            <div class="info-card-value">Monday - Saturday, 9AM - 5PM</div>
+            <div class="info-card-value">Mon - Fri 9AM - 5PM · Sat 9AM - 1PM</div>
           </div>
         </div>
         <div class="info-card">
@@ -831,10 +831,17 @@
     window.addEventListener('message', function (e) {
       if (e.origin !== 'https://truffel-booking.essenceautomations.com') return;
       var d = e.data;
-      if (!d || d.truffelBooking !== 'height') return;
-      var h = Math.max(520, Math.min(3000, Number(d.height) || 0));
       var f = document.getElementById('msgsndr-calendar');
-      if (f) f.style.height = h + 'px';
+      if (!d || !f) return;
+      // new step: if the patient has scrolled past the top of the booking box, bring it back
+      if (d.truffelBooking === 'top') {
+        var top = f.getBoundingClientRect().top;
+        if (top < 0) window.scrollTo({ top: window.scrollY + top - 110, behavior: 'smooth' });
+        return;
+      }
+      if (d.truffelBooking !== 'height') return;
+      var h = Math.max(520, Math.min(3000, Number(d.height) || 0));
+      f.style.height = h + 'px';
     });
   </script>
 
