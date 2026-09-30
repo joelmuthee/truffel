@@ -612,7 +612,7 @@
         </li>
         <li><a href="aftercare.html">Aftercare</a></li>
 <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
       <a href="#calendar-embed" class="btn btn-gold nav-cta" onclick="document.getElementById('calendar-embed').scrollIntoView({behavior:'smooth'});return false;">Book Appointment</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -667,7 +667,7 @@
       </div>
     </div>
     <a href="contact.html">Contact</a>
-    <a href="#">FAQ</a>
+    <a href="faq.html">FAQ</a>
     <a href="appointment.html" class="btn btn-gold" style="margin-top:20px;">Book Appointment</a>
   </div>
 
@@ -807,7 +807,7 @@
   <footer>
     <div class="container">
       <div class="footer-bottom">
-        <span>© 2025 Truffel Healthcare. All rights reserved.</span>
+        <span>© <span class="yr">2026</span> Truffel Healthcare. All rights reserved.</span>
         <span>Block A1, Saachi Plaza · Kilimani, Nairobi</span>
       </div>
     </div>
@@ -918,5 +918,7 @@
     function hideComingSoon(){document.getElementById("comingSoonToast").classList.remove("show");}
     document.querySelectorAll(".recon-link").forEach(function(l){l.addEventListener("click",function(e){e.preventDefault();showComingSoon(this.getAttribute("data-proc")||"Other Surgeries");});});
   </script>
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+<style>@media (max-width:600px){.wa-bubble{display:none!important}}</style>
 </body>
 </html>

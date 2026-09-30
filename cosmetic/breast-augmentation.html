@@ -1320,6 +1320,7 @@
         </li>
         <li><a href="../aftercare.html">Aftercare</a></li>
 <li><a href="../contact.html">Contact</a></li>
+<li><a href="../faq.html">FAQ</a></li>
       </ul>
 
       <div class="nav-cta">
@@ -1371,6 +1372,7 @@
 
     <a href="../aftercare.html" class="mobile-link">Aftercare</a>
 <a href="../contact.html" class="mobile-link">Contact</a>
+<a href="../faq.html" class="mobile-link">FAQ</a>
 
     <div class="mobile-cta">
       <a href="../appointment.html" class="btn btn-gold">Book Consultation</a>
@@ -1477,7 +1479,7 @@
           <p>Every procedure is individually planned. Dr. Matwa selects implant shape, size, and placement specific to your anatomy and aesthetic goals - no one-size approach.</p>
         </div>
         <div class="benefit-card reveal reveal-delay-4">
-          <span class="benefit-icon">⏳</span>
+          <span class="benefit-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
           <h3>Long-Lasting Results</h3>
           <p>Modern implants are designed to be durable and long-lasting. With proper care and follow-up, results can be enjoyed for many years before any revision is needed.</p>
         </div>
@@ -1734,6 +1736,7 @@
           <a href="../index.html#about">About Us</a>
           <a href="../index.html#services">Our Services</a>
           <a href="../contact.html">Contact</a>
+          <a href="../faq.html">FAQ</a>
           <a href="../appointment.html">Book Appointment</a>
         </div>
         <div>
@@ -1744,7 +1747,7 @@
         </div>
       </div>
       <div style="padding:24px 0;display:flex;justify-content:space-between;color:rgba(255,255,255,0.35);font-size:13px;flex-wrap:wrap;gap:12px">
-        <span>© 2025 Truffel Healthcare. All rights reserved.</span>
+        <span>© <span class="yr">2026</span> Truffel Healthcare. All rights reserved.</span>
         <span>Block A1, Saachi Plaza · Kilimani, Nairobi</span>
       </div>
     </div>
@@ -1896,5 +1899,7 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 </script>
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+<style>@media (max-width:600px){.wa-bubble{display:none!important}}</style>
 </body>
 </html>
