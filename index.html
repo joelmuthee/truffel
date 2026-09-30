@@ -3027,35 +3027,6 @@
       window.addEventListener('resize', () => goTo(current));
       goTo(0);
     })();
-
-    /* ── Booking popup modal ── */
-    const bookingModal = document.getElementById('bookingModal');
-    const popupIframe = document.getElementById('popup-FZhG7ela4pSLo13cTlLE');
-
-    function openBookingModal() {
-      bookingModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      // Lazy-load the iframe on first open
-      if (popupIframe && !popupIframe.src) {
-        popupIframe.src = 'https://link.essenceautomations.com/widget/form/FZhG7ela4pSLo13cTlLE';
-      }
-      if (popupIframe) popupIframe.style.display = 'block';
-    }
-
-    function closeBookingModal() {
-      bookingModal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    // Close on backdrop click
-    bookingModal.addEventListener('click', (e) => {
-      if (e.target === bookingModal) closeBookingModal();
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeBookingModal();
-    });
   </script>
 
   <!-- Calendar booking embed -->
