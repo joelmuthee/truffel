@@ -24,8 +24,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://link.essenceautomations.com">
-  <link rel="dns-prefetch" href="https://link.essenceautomations.com">
   <link rel="preconnect" href="https://app.essenceautomations.com">
   <link rel="dns-prefetch" href="https://app.essenceautomations.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -220,6 +218,13 @@
       font-size: 1.6rem; color: var(--white); font-weight: 600;
     }
     .form-wrap-header p { color: rgba(255,255,255,0.5); font-size: 13.5px; margin-top: 6px; }
+    .wa-form { padding: 28px 32px; display: flex; flex-direction: column; gap: 16px; }
+    .wa-form label { display: flex; flex-direction: column; gap: 6px; font-size: 13.5px; font-weight: 500; color: var(--dark); }
+    .wa-form input, .wa-form textarea { font: inherit; font-size: 15px; padding: 12px 14px; border: 1px solid #ddd; border-radius: 6px; width: 100%; min-width: 0; }
+    .wa-form input:focus, .wa-form textarea:focus { outline: none; border-color: var(--gold-dark); }
+    .wa-form button { align-self: flex-start; border: none; cursor: pointer; }
+    .wa-form-alt { font-size: 13px; color: var(--text-muted); }
+    .wa-form-alt a { color: var(--gold-deeper); }
 
     /* ── Iframe loading overlay ── */
     @keyframes spinRing { to { transform: rotate(360deg); } }
@@ -495,7 +500,7 @@
 <li><a href="contact.html" class="active">Contact</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
-      <button onclick="openBookingModal()" class="btn btn-gold nav-cta">Book Appointment</button>
+      <a href="appointment.html" class="btn btn-gold nav-cta">Book Appointment</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -550,7 +555,7 @@
     <a href="aftercare.html" onclick="closeMobileNav()">Aftercare</a>
 <a href="contact.html" onclick="closeMobileNav()">Contact</a>
     <a href="#" onclick="closeMobileNav()">FAQ</a>
-    <button onclick="closeMobileNav(); openBookingModal()" class="btn btn-gold" style="margin-top:20px;">Book Appointment</button>
+    <a href="appointment.html" class="btn btn-gold" style="margin-top:20px;">Book Appointment</a>
   </div>
 
   <!-- PAGE HERO -->
@@ -611,41 +616,15 @@
         <div class="form-wrap reveal reveal-delay-1">
           <div class="form-wrap-header">
             <h2>Send Us A Message</h2>
-            <p>We'll get back to you within 24 hours.</p>
+            <p>Your message opens in WhatsApp, ready to send to the clinic.</p>
           </div>
-          <!-- Loading overlay -->
-          <div class="iframe-loader" id="formLoader">
-            <div class="loader-spinner-wrap">
-              <div class="loader-ring"></div>
-              <div class="loader-letter">T</div>
-            </div>
-            <div class="loader-label">Loading form</div>
-            <div class="loader-dots"><span></span><span></span><span></span></div>
-            <div class="loader-skeleton">
-              <div class="skeleton-row"></div>
-              <div class="skeleton-row"></div>
-              <div class="skeleton-row"></div>
-            </div>
-          </div>
-
-          <iframe
-            src="https://link.essenceautomations.com/widget/form/iW3sDgjAzRQurOSiT8E0"
-            style="width:100%;height:1183px;border:none;"
-            id="inline-iW3sDgjAzRQurOSiT8E0"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Contact Us Form"
-            data-height="1183"
-            data-layout-iframe-id="inline-iW3sDgjAzRQurOSiT8E0"
-            data-form-id="iW3sDgjAzRQurOSiT8E0"
-            title="Contact Us Form"
-            onload="hideLoader('formLoader')">
-          </iframe>
+          <form class="wa-form" id="waForm">
+            <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+            <label>Procedure you're asking about (optional)<input type="text" name="topic"></label>
+            <label>Your message<textarea name="message" rows="5" required></textarea></label>
+            <button type="submit" class="btn btn-gold">Send on WhatsApp</button>
+            <p class="wa-form-alt">Prefer email? <a href="mailto:info@truffelhealthcare.co.ke">info@truffelhealthcare.co.ke</a></p>
+          </form>
         </div>
 
       </div>
@@ -692,20 +671,6 @@
     </a>
   </div>
 
-  <!-- Booking Modal (reused) -->
-  <div id="bookingModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;">
-    <div style="background:var(--white);border-radius:10px;width:min(560px,92vw);max-height:90vh;overflow-y:auto;position:relative;">
-      <button onclick="closeBookingModal()" style="position:absolute;top:12px;right:14px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--dark);z-index:10;">✕</button>
-      <iframe
-        src="https://link.essenceautomations.com/widget/form/iW3sDgjAzRQurOSiT8E0"
-        style="width:100%;height:700px;border:none;border-radius:10px;"
-        title="Book Appointment">
-      </iframe>
-    </div>
-  </div>
-
-  <script src="https://link.essenceautomations.com/js/form_embed.js"></script>
-
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
@@ -730,11 +695,14 @@
       document.getElementById('mobileReconPanel').classList.toggle('open');
     });
 
-    const bookingModal = document.getElementById('bookingModal');
-    function openBookingModal() { bookingModal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    function closeBookingModal() { bookingModal.style.display = 'none'; document.body.style.overflow = ''; }
-    bookingModal.addEventListener('click', e => { if (e.target === bookingModal) closeBookingModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBookingModal(); });
+    document.getElementById('waForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const f = e.target;
+      const lines = ['Hello, my name is ' + f.name.value.trim() + '.'];
+      if (f.topic.value.trim()) lines.push('I am asking about: ' + f.topic.value.trim() + '.');
+      lines.push('', f.message.value.trim());
+      window.open('https://wa.me/254712419419?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    });
 
     const waBubble = document.getElementById('waBubble');
     document.getElementById('waClose').addEventListener('click', () => waBubble.setAttribute('hidden',''));
